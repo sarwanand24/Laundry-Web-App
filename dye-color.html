@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dye Color</title>
+         <meta charset="UTF-8">
+            <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+        <meta name="description" content="Dye Color Section">
+        <meta name="viewport" content="width=device-width , initial-scale=1, user-scalable = 0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+       <style>
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    
+    html,body{
+                background-color: black;
+                overflow-x: hidden;
+                scrollbar-width: none;
+                width: 100%;
+                height: 100%;
+                position:absolute;
+            }
+    
+    ::-webkit-scrollbar{
+        display: none;
+    }
+
+    #back-arrow{
+        color: white;
+        font-size: 50px;
+        font-weight: bolder;
+        margin-left: 4%;
+    }
+
+    h1{
+        text-align: center;
+      padding-bottom: 5%;
+        color: rgb(54, 177, 177);
+        font-size: 30px;
+        font-family: cursive;
+        font-weight: bold;
+    }
+
+    .text{
+        color: yellow;
+        text-align: center;
+        font-size: large;
+    }
+
+    h2{
+        width: 100%;
+        text-align: center;
+        color: black;
+        background-color: yellow;
+        font-size: 35px;
+        font-family: cursive;
+        font-weight: bolder;
+        padding: 5%;
+        margin-top: 5%;
+    }
+
+    .box{
+        display: inline-block;
+    width: 50px;
+    height: 50px;
+    color: black;
+    font-weight: 500;
+    font-size: small;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 3%;
+    }
+
+    #schedule-pickup{
+        text-align: center;
+        font-size: 30px;
+        font-weight: bolder;
+        font-family: cursive;
+        color: yellow;
+        padding: 13%;
+    }
+
+    .left-bot{
+  clip-path: polygon(0% 25.5%, 100% 25.5%, 80.2% 50.25%, 100% 75%, 0% 74.75%);
+  background-color: yellow;
+  position: fixed;
+  bottom: -6%;
+  left: 0;
+  width: 45%;
+  height: 100px;
+  z-index: 1000;
+}
+
+.right-bot{
+  clip-path: polygon(0% 25.5%, 100% 25.5%, 100% 75%, 0% 74.75%, 19.7% 50.13%);
+background-color: yellow;
+position: fixed;
+bottom: -6%;
+right: 0;
+width: 45%;
+height: 100px;
+z-index: 1000;
+}
+
+.bot1{
+  z-index: 10000;
+  color: rgb(0, 0, 0);
+  font-size: 23px;
+  font-weight:bold;
+  font-family: 'Times New Roman', Times, serif;
+  position: fixed;
+  bottom: 1%;
+  left: 2%;
+}
+.bot2{
+  z-index: 10000;
+  color: rgb(0, 0, 0);
+  font-size: 23px;;
+  font-weight:bold;
+  font-family: 'Times New Roman', Times, serif;
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+}
+
+#home{
+  color: black;
+  font-size: 35px;
+  font-weight: bolder;
+  background-color: rgb(83, 199, 199);
+  border-radius: 60px;
+  width: 50px;
+  text-align: center;
+  padding: 1%;
+  position: fixed;
+  bottom:-1%;
+  left: 42.5%;
+}
+
+input[type="checkbox"]{
+    position: absolute;
+    height: 60px;
+    opacity: 0;
+}
+
+.selected{
+  outline: 3px solid rgb(0, 255, 0);
+  border-radius: 8px;
+}
+
+    /**************** MOBILE RESOLUTION ************/
+
+@media only screen and (min-width:360px){
+    .box{
+        display: inline-block;
+    width: 60px;
+    height: 60px;
+    color: black;
+    font-weight: 500;
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 2%;
+    }
+    #schedule-pickup{
+        padding: 15%;
+    }
+    #home{
+        position: fixed;
+  bottom:-1%;
+  left: 43%;
+    }
+}
+
+@media only screen and (min-width:412px){
+    .box{
+        display: inline-block;
+    width: 70px;
+    height: 70px;
+    color: black;
+    font-weight: 500;
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 2%;
+    }
+    #home{
+        width: 60px;
+    font-size: 45px;
+    position: fixed;
+  bottom:0%;
+  left: 43%; 
+    }
+    .right-bot{
+    height: 130px;
+    position: fixed;
+    bottom:-4%;
+  }
+  .left-bot{
+    height: 130px;
+    position: fixed;
+    bottom:-4%;
+  }
+  .bot1{
+    position: fixed;
+    bottom:1%;
+    left: 1%;
+    font-size: 30px;
+  }
+  .bot2{
+    position: fixed;
+    bottom:1%;
+    right: 1%;
+    font-size: 30px;
+  }
+}
+
+/**************** TABLET RESOLUTION ************/
+
+@media only screen and (min-width:768px){
+    .right-bot{
+    height: 160px;
+    position: fixed;
+    bottom:-4%;
+  }
+  .left-bot{
+    height: 160px;
+    position: fixed;
+    bottom:-4%;
+  }
+  .bot1{
+    position: fixed;
+    bottom:1%;
+    left: 1%;
+    font-size: 50px;
+  }
+  .bot2{
+    position: fixed;
+    bottom:1%;
+    right: 1%;
+    font-size: 50px;
+  }
+  #home{
+        width: 100px;
+    font-size: 70px;
+    position: fixed;
+  bottom:0%;
+  left: 43%; 
+    }
+    #back-arrow{
+        font-size: 100px;
+    }
+    h1{
+        font-size: 60px;
+    }
+    .text{
+        font-size: xx-large;
+    }
+    h2{
+        font-size: 70px;
+    }
+    .box{
+        display: inline-block;
+    width: 110px;
+    height: 110px;
+    color: black;
+    font-weight: 500;
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 5%;
+    }
+    #schedule-pickup{
+        font-size: 60px;
+    }
+}
+
+    </style>
+    </head>
+
+    <body>
+        <p id="back-arrow">&larr;</p>
+         <h1>Dyes Single Colour</h1>
+         <p class="text">Convert Your Old Faded Clothes To New Clothes</p>
+         <h2>Colour Catalogue</h2>
+
+         <div style="margin-top: 10%;">
+            <div id="lemon-yellow" class="box" style="background-color:#ffff1e;">
+                <input type="checkbox" name="color" id="1">
+                <p>01</p>
+                <p>Lemon Yellow</p>
+            </div>
+            <div id="golden-yellow" class="box" style="background-color:rgb(252, 201, 72);">
+                <input type="checkbox" name="color" id="2">
+                <p>02</p>
+                <p>Golden Yellow</p>
+            </div>
+            <div id="orange" class="box" style="background-color:orange;">
+                <input type="checkbox" name="color" id="3">
+                <p>03</p>
+                <p>Orange Colour</p>
+            </div>
+            <div id="red" class="box" style="background-color:red;">
+                <input type="checkbox" name="color" id="4">
+                <p>04</p>
+                <p>Red Colour</p>
+            </div>
+            <div id="pink" class="box" style="background-color:pink;">
+                <input type="checkbox" name="color" id="5">
+                <p>05</p>
+                <p>Pink Colour</p>
+            </div>
+            </div>
+
+            <div style="margin-top: 5%;">
+                <div id="lavender" class="box" style="background-color:lavender;">
+                    <input type="checkbox" name="color" id="6">
+                    <p>06</p>
+                    <p>Lavender Colour</p>
+                </div>
+                <div id="violet" class="box" style="background-color:violet;">
+                    <input type="checkbox" name="color" id="7">
+                    <p>07</p>
+                    <p>Violet Colour</p>
+                </div>
+                <div id="blue" class="box" style="background-color:blue;">
+                    <input type="checkbox" name="color" id="8">
+                    <p>08</p>
+                    <p>Blue Colour</p>
+                </div>
+                <div id="dark-blue" class="box" style="background-color:darkblue;">
+                    <input type="checkbox" name="color" id="9">
+                    <p>09</p>
+                    <p>Dark Blue</p>
+                </div>
+                <div id="sky-blue" class="box" style="background-color:skyblue;">
+                    <input type="checkbox" name="color" id="10">
+                    <p>10</p>
+                    <p id="c">Sky Blue Colour</p>
+                </div>
+                </div>
+
+                <div style="margin-top: 5%;">
+                    <div id="brown" class="box" style="background-color:brown;">
+                        <input type="checkbox" name="color" id="11">
+                        <p>11</p>
+                        <p>Brown Colour</p>
+                    </div>
+                    <div id="rani-pink" class="box" style="background-color:palevioletred;">
+                        <input type="checkbox" name="color" id="12">
+                        <p>12</p>
+                        <p id="c2">Rani Pink</p>
+                    </div>
+                    <div id="bottle-green" class="box" style="background-color:rgb(11, 82, 11);">
+                        <input type="checkbox" name="color" id="13">
+                        <p>13</p>
+                        <p>Bottle Green</p>
+                    </div>
+                    <div id="green" class="box" style="background-color:green;">
+                        <input type="checkbox" name="color" id="14">
+                        <p>14</p>
+                        <p>Green Colour</p>
+                    </div>
+                    <div id="parrot-green" class="box" style="background-color:greenyellow;">
+                        <input type="checkbox" name="color" id="15">
+                        <p>15</p>
+                        <p>Parrot Green</p>
+                    </div>
+                    </div>
+
+                    <div style="margin-top: 5%;">
+                        <div id="steel-gray" class="box" style="background-color:slategray;">
+                            <input type="checkbox" name="color" id="16">
+                            <p>16</p>
+                            <p>Steel Gray</p>
+                        </div>
+                        <div id="black" class="box" style="background-color:rgb(29, 27, 27);">
+                            <input type="checkbox" name="color" id="17">
+                            <p>17</p>
+                            <p>Black Colour</p>
+                        </div>
+                        <div id="baby-pink" class="box" style="background-color:rgb(255, 218, 224)">
+                            <input type="checkbox" name="color" id="18">
+                            <p>18</p>
+                            <p>Baby Pink</p>
+                        </div>
+                        <div id="sun-orange" class="box" style="background-color:rgb(255, 217, 0);">
+                            <input type="checkbox" name="color" id="19">
+                            <p>19</p>
+                            <p>Sun Orange</p>
+                        </div>
+                        <div id="peach" class="box" style="background-color:peachpuff;">
+                            <input type="checkbox" name="color" id="20">
+                            <p>20</p>
+                            <p>Peach Colour</p>
+                        </div>
+                        </div>
+
+                        <p id="schedule-pickup">Schedule Pickup</p>
+
+                        <div class="left-bot"></div> <p class="bot1">Be Smart</p>
+                        <p id="home"><i class="fa-solid fa-house-chimney" style="color: #000000;"></i></p>
+                        <div class="right-bot"></div> <p class="bot2">Wear Clean</p>
+
+    </body>
+    <script>
+            var width = screen.width;
+        console.log(width);
+        if(width >= 360 && width < 412){
+           document.getElementById("c").innerHTML = "Sky Blue";
+           document.getElementById("c2").innerHTML = "Rani Pink";
+        }
+        else if(width >= 412){
+           document.getElementById("c").innerHTML = "Sky Blue Colour";
+           document.getElementById("c2").innerHTML = "Rani Pink Colour";
+        }
+        else if(width < 360){
+           document.getElementById("c").innerHTML = "Sky Blue Colour";
+        }
+
+        document.getElementById("back-arrow").addEventListener("click", function(){
+            window.location = "maincontent.html";
+           })
+           document.getElementById("home").addEventListener("click", function(){
+            window.location = "maincontent.html";
+           })
+
+           var checkbox = [];
+           var colors = [];
+
+           for(let i=1; i<=20; i++){
+            document.getElementById(i).addEventListener("click", function(){
+                for(let j=1; j<=20; j++){
+                  checkbox[j] = document.getElementById(j);
+                  if(checkbox[j].checked){
+                    if(j == 1){
+                        document.getElementById("lemon-yellow").classList.add("selected");
+                        if(!colors.includes("Lemon Yellow")){
+                        colors.push("Lemon Yellow");
+                        }
+                    }
+                    if(j == 2){
+                        document.getElementById("golden-yellow").classList.add("selected");
+                        if(!colors.includes("Golden Yellow")){
+                        colors.push("Golden Yellow");
+                        }
+                    }
+                    if(j == 3){
+                        document.getElementById("orange").classList.add("selected");
+                        if(!colors.includes("Orange")){
+                        colors.push("Orange");
+                        }
+                    }
+                    if(j == 4){
+                        document.getElementById("red").classList.add("selected");
+                        if(!colors.includes("Red")){
+                        colors.push("Red");
+                        }
+                    }
+                    if(j == 5){
+                        document.getElementById("pink").classList.add("selected");
+                        if(!colors.includes("Pink")){
+                        colors.push("Pink");
+                        }
+                    }
+                    if(j == 6){
+                        document.getElementById("lavender").classList.add("selected");
+                        if(!colors.includes("Lavender")){
+                        colors.push("Lavender");
+                        }
+                    }
+                    if(j == 7){
+                        document.getElementById("violet").classList.add("selected");
+                        if(!colors.includes("Violet")){
+                        colors.push("Violet");
+                        }
+                    }
+                    if(j == 8){
+                        document.getElementById("blue").classList.add("selected");
+                        if(!colors.includes("Blue")){
+                        colors.push("Blue");
+                        }
+                    }
+                    if(j == 9){
+                        document.getElementById("dark-blue").classList.add("selected");
+                        if(!colors.includes("Dark Blue")){
+                        colors.push("Dark Blue");
+                        }
+                    }
+                    if(j == 10){
+                        document.getElementById("sky-blue").classList.add("selected");
+                        if(!colors.includes("Sky Blue")){
+                        colors.push("Sky Blue");
+                        }
+                    }
+                    if(j == 11){
+                        document.getElementById("brown").classList.add("selected");
+                       if(!colors.includes("Brown")){
+                          colors.push("Brown");
+                       }
+                    }
+                    if(j == 12){
+                        document.getElementById("rani-pink").classList.add("selected");
+                       if(!colors.includes("Rani Pink")){
+                         colors.push("Rani Pink");
+                       }
+                    }
+                    if(j == 13){
+                        document.getElementById("bottle-green").classList.add("selected");
+                       if(!colors.includes("Bottle Green")){
+                         colors.push("Bottle Green");
+                       }
+                    }
+                    if(j == 14){
+                        document.getElementById("green").classList.add("selected");
+                       if(!colors.includes("Green")){
+                         colors.push("Green");
+                       }
+                    }
+                    if(j == 15){
+                        document.getElementById("parrot-green").classList.add("selected");
+                       if(!colors.includes("Parrot Green")){
+                         colors.push("Parrot Green");
+                       }
+                    }
+                    if(j == 16){
+                        document.getElementById("steel-gray").classList.add("selected");
+                       if(!colors.includes("Steel Gray")){
+                         colors.push("Steel Gray");
+                       }
+                    }
+                    if(j == 17){
+                        document.getElementById("black").classList.add("selected");
+                       if(!colors.includes("Black")){
+                         colors.push("Black");
+                       }
+                    }
+                    if(j == 18){
+                        document.getElementById("baby-pink").classList.add("selected");
+                       if(!colors.includes("Baby Pink")){
+                         colors.push("Baby Pink");
+                       }
+                    }
+                    if(j == 19){
+                        document.getElementById("sun-orange").classList.add("selected");
+                       if(!colors.includes("Sun Orange")){
+                         colors.push("Sun Orange");
+                       }
+                    }
+                    if(j == 20){
+                        document.getElementById("peach").classList.add("selected");
+                       if(!colors.includes("Peach")){
+                          colors.push("Peach");
+                       }
+                    }
+                  }
+                  if(!checkbox[j].checked){
+                    if(j == 1){
+                        document.getElementById("lemon-yellow").classList.remove("selected");
+                       if(colors.includes("Lemon Yellow")){
+                          colors.splice(colors.indexOf("Lemon Yellow"),1);
+                       }
+                    }
+                    if(j == 2){
+                        document.getElementById("golden-yellow").classList.remove("selected");
+                       if(colors.includes("Golden Yellow")){
+                          colors.splice(colors.indexOf("Golden Yellow"),1);
+                       }
+                    }
+                    if(j == 3){
+                        document.getElementById("orange").classList.remove("selected");
+                       if(colors.includes("Orange")){
+                          colors.splice(colors.indexOf("Orange"),1);
+                       }
+                    }
+                    if(j == 4){
+                        document.getElementById("red").classList.remove("selected");
+                       if(colors.includes("Red")){
+                          colors.splice(colors.indexOf("Red"),1);
+                       }
+                    }
+                    if(j == 5){
+                        document.getElementById("pink").classList.remove("selected");
+                       if(colors.includes("Pink")){
+                          colors.splice(colors.indexOf("Pink"),1);
+                       }
+                    }
+                    if(j == 6){
+                        document.getElementById("lavender").classList.remove("selected");
+                       if(colors.includes("Lavender")){
+                          colors.splice(colors.indexOf("Lavender"),1);
+                       }
+                    }
+                    if(j == 7){
+                        document.getElementById("violet").classList.remove("selected");
+                       if(colors.includes("Violet")){
+                          colors.splice(colors.indexOf("Violet"),1);
+                       }
+                    }
+                    if(j == 8){
+                        document.getElementById("blue").classList.remove("selected");
+                       if(colors.includes("Blue")){
+                          colors.splice(colors.indexOf("Blue"),1);
+                       }
+                    }
+                    if(j == 9){
+                        document.getElementById("dark-blue").classList.remove("selected");
+                       if(colors.includes("Dark Blue")){
+                          colors.splice(colors.indexOf("Dark Blue"),1);
+                       }
+                    }
+                    if(j == 10){
+                        document.getElementById("sky-blue").classList.remove("selected");
+                       if(colors.includes("Sky Blue")){
+                          colors.splice(colors.indexOf("Sky Blue"),1);
+                       }
+                    }
+                    if(j == 11){
+                        document.getElementById("brown").classList.remove("selected");
+                       if(colors.includes("Brown")){
+                          colors.splice(colors.indexOf("Brown"),1);
+                       }
+                    }
+                    if(j == 12){
+                        document.getElementById("rani-pink").classList.remove("selected");
+                       if(colors.includes("Rani Pink")){
+                          colors.splice(colors.indexOf("Rani Pink"),1);
+                       }
+                    }
+                    if(j == 13){
+                        document.getElementById("bottle-green").classList.remove("selected");
+                       if(colors.includes("Bottle Green")){
+                          colors.splice(colors.indexOf("Bottle Green"),1);
+                       }
+                    }
+                    if(j == 14){
+                        document.getElementById("green").classList.remove("selected");
+                       if(colors.includes("Green")){
+                          colors.splice(colors.indexOf("Green"),1);
+                       }
+                    }
+                    if(j == 15){
+                        document.getElementById("parrot-green").classList.remove("selected");
+                       if(colors.includes("Parrot Green")){
+                          colors.splice(colors.indexOf("Parrot Green"),1);
+                       }
+                    }
+                    if(j == 16){
+                        document.getElementById("steel-gray").classList.remove("selected");
+                       if(colors.includes("Steel Gray")){
+                          colors.splice(colors.indexOf("Steel Gray"),1);
+                       }
+                    }
+                    if(j == 17){
+                        document.getElementById("black").classList.remove("selected");
+                       if(colors.includes("Black")){
+                          colors.splice(colors.indexOf("Black"),1);
+                       }
+                    }
+                    if(j == 18){
+                        document.getElementById("baby-pink").classList.remove("selected");
+                       if(colors.includes("Baby Pink")){
+                          colors.splice(colors.indexOf("Baby Pink"),1);
+                       }
+                    }
+                    if(j == 19){
+                        document.getElementById("sun-orange").classList.remove("selected");
+                       if(colors.includes("Sun Orange")){
+                          colors.splice(colors.indexOf("Sun Orange"),1);
+                       }
+                    }
+                    if(j == 20){
+                        document.getElementById("peach").classList.remove("selected");
+                       if(colors.includes("Peach")){
+                          colors.splice(colors.indexOf("Peach"),1);
+                       }
+                    }
+                  }
+                }
+                document.getElementById("schedule-pickup").addEventListener("click", function(){
+                console.log(colors);//Carrying the end result , yaha se cookies karo direct last cart m.
+                sessionStorage.setItem("colors2", colors);
+                window.location = "date-cart.html";
+                })
+            })
+           }
+
+        </script>
+
+ </html>

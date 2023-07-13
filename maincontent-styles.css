@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+html,body{
+            background-color: black;
+            overflow-x: hidden;
+            scrollbar-width: none;
+            width: 100%;
+            height: 100%;
+            position:absolute;
+        }
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+
+#location-name{
+  color: white;
+  text-decoration: underline;
+  font-size: larger;
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ .center > img{
+ width: 12%;
+}
+
+#location-perm{
+  width: 80%;
+  border-radius: 10px;
+  background-color: gray;
+  position: fixed;
+  top: 30%;
+  left: 10%;
+  padding:5%;
+  z-index: 1000;
+}
+
+#location-perm > p{
+  text-align: center;
+  font-size: 23px;
+  font-weight: bolder;
+  color: rgb(0, 9, 10);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.bc{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.bc > button{
+  margin-top: 10%;
+  font-size: 25px;
+  font-weight: 500;
+  background-color: rgb(25, 140, 160);
+  color: white;
+  border-radius: 10px;
+  border-style: inset;
+  border-color: aliceblue;
+  padding: 3%;
+}
+
+h2{
+  color: yellow;
+  font-size: x-large;
+  font-family: Arial, Helvetica, sans-serif;
+ font-weight: bold;
+ padding: 5%;
+}
+
+h2 > p{
+  color: rgb(52, 170, 170);
+  font-size: medium;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.right-arrow{
+  clip-path: polygon(0% 25.5%, 75% 25%, 100% 50.25%, 75% 75%, 0% 75%);
+  background-color: #ffc72c;
+  width: 230px;
+  height: 135px;
+  margin-top: -8%;
+}
+
+.txt1{
+  position: absolute;
+  top: 145px;
+  left: 10%;
+  color: black;
+  font-family: cursive;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.left-arrow{
+  float: right;
+  margin-top: -15%;
+  clip-path: polygon(35.4% 25.5%, 100% 25.5%, 100% 75%, 35.4% 75%, 0.2% 50.25%);
+  background-color: #ffc72c;
+  width: 230px;
+  height: 135px;
+}
+
+.txt2{
+  position: absolute;
+  top: 235px;
+  right: 6%;
+  color: black;
+  font-family: cursive;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+#recharge{
+  margin-top: 20%;
+}
+
+.txt3{
+  position: absolute;
+  top: 320px;
+  left: 10%;
+  color: black;
+  font-family: cursive;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.txt4{
+  position: absolute;
+  top: 410px;
+  right: 6%;
+  color: black;
+  font-family: cursive;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+.left-bot{
+  clip-path: polygon(0% 25.5%, 100% 25.5%, 80.2% 50.25%, 100% 75%, 0% 74.75%);
+  background-color: yellow;
+  position: fixed;
+  bottom: -6%;
+  left: 0;
+  width: 45%;
+  height: 100px;
+  z-index: 1000;
+}
+
+.right-bot{
+  clip-path: polygon(0% 25.5%, 100% 25.5%, 100% 75%, 0% 74.75%, 19.7% 50.13%);
+background-color: yellow;
+position: fixed;
+bottom: -6%;
+right: 0;
+width: 45%;
+height: 100px;
+z-index: 1000;
+}
+
+.bot1{
+  z-index: 10000;
+  color: rgb(0, 0, 0);
+  font-size: 23px;
+  font-weight:bold;
+  font-family: 'Times New Roman', Times, serif;
+  position: fixed;
+  bottom: 1%;
+  left: 2%;
+}
+.bot2{
+  z-index: 10000;
+  color: rgb(0, 0, 0);
+  font-size: 23px;;
+  font-weight:bold;
+  font-family: 'Times New Roman', Times, serif;
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+}
+
+#cart{
+  color: black;
+  font-size: 35px;
+  font-weight: bolder;
+  background-color: rgb(83, 199, 199);
+  border-radius: 60px;
+  width: 50px;
+  text-align: center;
+  padding: 1%;
+  position: fixed;
+  bottom:-1%;
+  left: 42.5%;
+}
+
+/**************** MOBILE RESOLUTION ************/
+
+@media only screen and (min-width:360px){
+  .txt1{
+    position: absolute;
+    top: 160px;
+    left: 10%;
+  }
+  .right-arrow{
+    width: 250px;
+    height: 150px;
+  }
+  .left-arrow{
+    width: 250px;
+    height: 150px;
+  }
+  .txt3{
+    position: absolute;
+    top: 365px;
+    left: 10%;
+  }
+  .txt4{
+    position: absolute;
+    top: 485px;
+    right: 6%;
+    color: black;
+    font-family: cursive;
+    font-weight: bolder;
+    font-size: 25px;
+  }
+  .txt2{
+    position: absolute;
+    top: 275px;
+    right: 6%;
+    color: black;
+    font-family: cursive;
+    font-weight: bolder;
+    font-size: 30px;
+  }
+  .left-arrow{
+    margin-top: -10%;
+  }
+  #recharge{
+    margin-top: 25%;
+  }
+  #cart{
+    position: fixed;
+  bottom:-1%;
+  left: 43%; 
+  }
+}
+
+@media only screen and (min-width:412px){
+  .txt1{
+    position: absolute;
+    top: 165px;
+    left: 10%;
+    font-size: 40px;
+  }
+  .right-arrow{
+    width: 300px;
+    height: 170px;
+  }
+  .left-arrow{
+    margin-top: -1%;
+    width: 300px;
+    height: 170px;
+  }
+  .txt3{
+    position: absolute;
+    top: 510px;
+    left: 10%;
+    font-size: 40px;
+  }
+  .txt4{
+    position: absolute;
+    top: 685px;
+    right: 3%;
+    font-size: 35px;
+  }
+  .txt2{
+    position: absolute;
+    top: 335px;
+    right: 6%;
+    font-size: 40px;
+  }
+  #recharge{
+    margin-top: 50%;
+  }
+  #cart{
+    width: 60px;
+    font-size: 45px;
+    position: fixed;
+  bottom:0%;
+  left: 43%; 
+  }
+  .right-bot{
+    height: 130px;
+    position: fixed;
+    bottom:-4%;
+  }
+  .left-bot{
+    height: 130px;
+    position: fixed;
+    bottom:-4%;
+  }
+  .bot1{
+    position: fixed;
+    bottom:1%;
+    left: 1%;
+    font-size: 30px;
+  }
+  .bot2{
+    position: fixed;
+    bottom:1%;
+    right: 1%;
+    font-size: 30px;
+  }
+}
+
+/**************** TABLET RESOLUTION ************/
+
+@media only screen and (min-width:768px){
+ #location-name{
+   font-size: xx-large;
+ }
+ h2{
+  font-size: 40px;
+ }
+ h2 > p{
+  font-size: 30px;
+ }
+ #location-perm > p{
+  font-size: 33px;
+ }
+ .bc > button{
+  font-size: 35px;
+ }
+ .txt1{
+  position: absolute;
+  top: 290px;
+  left: 10%;
+  font-size: 60px;
+}
+.txt2{
+  position: absolute;
+  top: 535px;
+  right: 10%;
+  font-size: 60px;
+}
+.txt3{
+  position: absolute;
+  top: 780px;
+  left: 10%;
+  font-size: 60px;
+}
+.txt4{
+  position: absolute;
+  top: 1030px;
+  font-size: 60px;
+}
+.right-arrow{
+  width: 550px;
+  height: 250px;
+}
+.left-arrow{
+  width: 550px;
+  height: 250px;
+}
+#recharge{
+  margin-top: 40%;
+}
+}

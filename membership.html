@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Membership Subscription</title>
+         <meta charset="UTF-8">
+            <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+        <meta name="description" content="Laundry Walaa Membership Subscription">
+        <meta name="viewport" content="width=device-width , initial-scale=1, user-scalable = 0 ">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+       <style>
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    
+    html,body{
+                background-color: black;
+                overflow-x: hidden;
+                scrollbar-width: none;
+                width: 100%;
+                height: 100%;
+            }
+    
+    ::-webkit-scrollbar{
+        display: none;
+    }
+
+    #back-arrow{
+        color: white;
+        font-size: 50px;
+        font-weight: bolder;
+        margin-left: 3%;
+    }
+
+    h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        color: rgb(65, 170, 184);
+    }
+
+    .text{
+      font-size: 15px;
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      color: yellow;
+      padding: 5%;
+    }
+
+    .left-bot{
+  clip-path: polygon(0% 25.5%, 100% 25.5%, 80.2% 50.25%, 100% 75%, 0% 74.75%);
+  background-color: yellow;
+  position: fixed;
+  bottom: -6%;
+  left: 0;
+  width: 45%;
+  height: 100px;
+  z-index: 1000;
+}
+
+.right-bot{
+  clip-path: polygon(0% 25.5%, 100% 25.5%, 100% 75%, 0% 74.75%, 19.7% 50.13%);
+background-color: yellow;
+position: fixed;
+bottom: -6%;
+right: 0;
+width: 45%;
+height: 100px;
+z-index: 1000;
+}
+
+.bot1{
+  z-index: 10000;
+  color: rgb(0, 0, 0);
+  font-size: 23px;
+  font-weight:bold;
+  font-family: 'Times New Roman', Times, serif;
+  position: fixed;
+  bottom: 1%;
+  left: 2%;
+}
+.bot2{
+  z-index: 10000;
+  color: rgb(0, 0, 0);
+  font-size: 23px;;
+  font-weight:bold;
+  font-family: 'Times New Roman', Times, serif;
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+}
+
+#home{
+  color: black;
+  font-size: 35px;
+  font-weight: bolder;
+  background-color: rgb(83, 199, 199);
+  border-radius: 60px;
+  width: 50px;
+  text-align: center;
+  padding: 1%;
+  position: fixed;
+  bottom:-1%;
+  left: 42.5%;
+}
+
+#forward-arrow{
+       color: white;
+       font-size: 120px;
+       font-weight: bolder;
+       text-align: center;
+       margin-top: -5%;
+}
+
+.slider-container {
+  height: 40vh;
+  display: inline-flex;
+  overflow: hidden;
+  scrollbar-width: none;
+  transform: translateX(0);
+  will-change: transform;
+  transition: transform 0.3s ease-out;
+  cursor: grab;
+}
+
+.slide{
+  max-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 2rem; */
+}
+
+.slide img{
+  max-width: 100%;
+  max-height: 100%;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 5px 5px 50px -1px var(--shadow);
+  border-radius: 4px;
+  user-select: none;
+}
+
+.grabbing {
+  cursor: grabbing;
+}
+
+.grabbing .slide img{
+  transform: scale(0.9);
+  box-shadow: 5px 5px 40px -1px var(--shadow);
+}
+
+@media only screen and (min-width:360px){
+    #home{
+        position: fixed;
+        bottom: -1%;
+        left: 43%;
+    }
+}
+
+@media only screen and (min-width:412px){
+    #home{
+        width: 60px;
+    font-size: 45px;
+    position: fixed;
+  bottom:0%;
+  left: 43%; 
+    }
+    .right-bot{
+    height: 130px;
+    position: fixed;
+    bottom:-4%;
+  }
+  .left-bot{
+    height: 130px;
+    position: fixed;
+    bottom:-4%;
+  }
+  .bot1{
+    position: fixed;
+    bottom:1%;
+    left: 1%;
+    font-size: 30px;
+  }
+  .bot2{
+    position: fixed;
+    bottom:1%;
+    right: 1%;
+    font-size: 30px;
+  }
+  h1{
+    font-size: 30px;
+  }
+}
+
+/**************** TABLET RESOLUTION ************/
+
+@media only screen and (min-width:768px){
+    #back-arrow{
+        font-size: 100px;
+    }
+    h1{
+        font-size: 70px;
+    }
+    .right-bot{
+    height: 160px;
+    position: fixed;
+    bottom:-4%;
+  }
+  .left-bot{
+    height: 160px;
+    position: fixed;
+    bottom:-4%;
+  }
+  .bot1{
+    position: fixed;
+    bottom:1%;
+    left: 1%;
+    font-size: 50px;
+  }
+  .bot2{
+    position: fixed;
+    bottom:1%;
+    right: 1%;
+    font-size: 50px;
+  }
+  #home{
+        width: 100px;
+    font-size: 70px;
+    position: fixed;
+  bottom:0%;
+  left: 43%; 
+    }
+    .text{
+      font-size: 40px;
+    }
+
+}
+
+</style>
+    </head>
+
+<body>
+  <p id="back-arrow">&larr;</p>
+  <h1>Membership Subscription</h1>
+  <p class="text">Washing clothes is a hard job especially if you are not familiar in doing it to help you out on this little dilemma we are here for you Laundry Walaa</p>
+
+  <div class="slider-container">
+    <div class="slide">
+      <img id="rs299"
+        src="https://bnz05pap002files.storage.live.com/y4mrqCB10IYnAFK1Bmw0-x23yvaa-wOoQZMaXIByVlKgW24SF_qKapWt_ohQj48FtKAdtfO3SNttPb39riwfH7GzAHefoYMO9t3UWACpvO_6sRMRQU08SrnLq1TQf68iRSzyvs18wyxb6gCN2jWcAeBLYRgQj5qWffoZg-KEeVfd0z29gjUkVEtgtu1xbMUuDE3?width=1506&height=1130&cropmode=none"
+      />
+    </div>
+    <div class="slide">
+      <img id="rs499"
+        src="https://bnz05pap002files.storage.live.com/y4mScRdbVaq1N_IxOcFivn4V8vdK2EFBTvFljQg5brfiFiYIjQyoDcoaigVZw0MxsZMfRoqnPKO8pREMfn8nvWwEvDeaYGkg2MZpTlKJXSVrsdPFEXLJV3DRLLFItUG6BZ38A1au4G6HmyOVC9-3t2y0L-LUPzMQOJVbg0ARJH_uy1YJQj8OCsl7OB0WqO_6Yu_?width=1120&height=1120&cropmode=none"
+      />
+    </div>
+    <div class="slide">
+      <img id="rs999"
+        src="https://bnz05pap002files.storage.live.com/y4moplFLIBjQ_uYY_kz3I-g8NHJW9jJFFFSwP5o94-QPd9qq2jrMoB4y5ShniknjHmRmv3PHhOayRST0iSSpUhqdS6_K1mpZP8f6OjDafcBs9dAUf7G6_Et8Rl3vcQLonEek8l4EChSvfuHviklM4XFg-x7EWMeQmghGKKvJLfpWy99kClQhqiI4x-9bSzl2Bsb?width=1587&height=1190&cropmode=none"
+      />
+    </div>
+    <div class="slide">
+      <img id="rs1599"
+        src="https://bnz05pap002files.storage.live.com/y4meCw8Tmp-dv04PKsdMylQbTyINI0KNQhECHE1WxJ_3dyOwjxG_SntXAaUbMdOiUb1cH9ECpejs8wonr43ZQpJxdBiZrNMSv7mLoZTrxwJUTGeCRxEMsINDdIRmQkDl6RU5B8C2KcjnD8QiLLloOuus2dgLQFYvThSHog21qUkH3Zzha2F3pDQYJ5yFNMnbJvQ?width=1413&height=1060&cropmode=none"
+      />
+    </div>
+  </div>
+
+  <p id="forward-arrow">&rarr;</p>
+
+  <p class="text" style="margin-bottom: 20%;">Select your best Recharge Plan that is suitable for you</p>
+
+  <div class="left-bot"></div> <p class="bot1">Be Smart</p>
+  <p id="home"><i class="fa-solid fa-house-chimney" style="color: #000000;"></i></p>
+  <div class="right-bot"></div> <p class="bot2">Wear Clean</p>
+
+</body>
+
+<script>
+
+  const slider = document.querySelector('.slider-container'),
+  slides = Array.from(document.querySelectorAll('.slide'))
+
+// set up our state
+let isDragging = false,
+  startPos = 0,
+  currentTranslate = 0,
+  prevTranslate = 0,
+  animationID,
+  currentIndex = 0
+
+// add our event listeners
+slides.forEach((slide, index) => {
+  const slideImage = slide.querySelector('img')
+  // disable default image drag
+  slideImage.addEventListener('dragstart', (e) => e.preventDefault())
+
+   // touch events
+   slide.addEventListener('touchstart', pointerDown(index))
+  slide.addEventListener('touchend', pointerUp)
+  slide.addEventListener('touchmove', pointerMove)
+
+   // mouse events
+   slide.addEventListener('mousedown', pointerDown(index))
+  slide.addEventListener('mouseup', pointerUp)
+  slide.addEventListener('mouseleave', pointerUp)
+  slide.addEventListener('mousemove', pointerMove)
+})
+
+// make responsive to viewport changes
+window.addEventListener('resize', setPositionByIndex)
+
+// prevent menu popup on long press
+window.oncontextmenu = function (event) {
+  event.preventDefault()
+  event.stopPropagation()
+  return false
+}
+
+// use a HOF so we have index in a closure
+function pointerDown(index) {
+  return function (event) {
+    currentIndex = index
+    startPos = getPositionX(event)
+    isDragging = true
+    animationID = requestAnimationFrame(animation)
+    slider.classList.add('grabbing')
+  }
+}
+
+function pointerMove(event) {
+  if (isDragging) {
+    const currentPosition = getPositionX(event)
+    currentTranslate = prevTranslate + currentPosition - startPos
+  }
+}
+
+function getPositionX(event){
+  return event.type.includes("mouse") ? event.pageX : event.touches[0].clientX
+}
+
+function pointerUp() {
+  cancelAnimationFrame(animationID)
+  isDragging = false
+  const movedBy = currentTranslate - prevTranslate
+
+  // if moved enough negative then snap to next slide if there is one
+  if (movedBy < -100 && currentIndex < slides.length - 1) currentIndex += 1
+
+  // if moved enough positive then snap to previous slide if there is one
+  if (movedBy > 100 && currentIndex > 0) currentIndex -= 1
+
+  setPositionByIndex()
+
+  slider.classList.remove('grabbing')
+}
+
+function animation() {
+  setSliderPosition()
+  if (isDragging) requestAnimationFrame(animation)
+}
+
+function setPositionByIndex() {
+  currentTranslate = currentIndex * -window.innerWidth
+  prevTranslate = currentTranslate
+  setSliderPosition()
+}
+
+function setSliderPosition() {
+  slider.style.transform = `translateX(${currentTranslate}px)`
+}
+
+
+document.getElementById("back-arrow").addEventListener("click", function(){
+   window.location = "maincontent.html";
+  })
+  document.getElementById("home").addEventListener("click", function(){
+   window.location = "maincontent.html";
+  })
+
+    var clothes;
+  document.getElementById("rs299").addEventListener("click", function(){
+      clothes = 20;
+      sessionStorage.setItem("clothes2", clothes);
+      window.location = "date-cart.html";
+  })
+
+  document.getElementById("rs499").addEventListener("click", function(){
+      clothes = 40;
+      sessionStorage.setItem("clothes2", clothes);
+      window.location = "date-cart.html";
+  })
+
+  document.getElementById("rs999").addEventListener("click", function(){
+      clothes = 80;
+      sessionStorage.setItem("clothes2", clothes);
+      window.location = "date-cart.html";
+  })
+
+  document.getElementById("rs1599").addEventListener("click", function(){
+      clothes = 110;
+      sessionStorage.setItem("clothes2", clothes);
+      window.location = "date-cart.html";
+  })
+
+  </script>
+
+</html>

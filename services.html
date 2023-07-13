@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Our Services</title>
+         <meta charset="UTF-8">
+            <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+        <meta name="description" content="All Services of Laundry Walaa">
+        <meta name="viewport" content="width=device-width , initial-scale=1, user-scalable = 0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+       <style>
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    
+    html,body{
+                background-color: black;
+                overflow-x: hidden;
+                scrollbar-width: none;
+                width: 100%;
+                height: 100%;
+                position:absolute;
+            }
+    
+    ::-webkit-scrollbar{
+        display: none;
+    }
+
+    #back-arrow{
+        color: white;
+        font-size: 50px;
+        font-weight: bolder;
+        margin-left: 4%;
+    }
+
+    h1{
+        font-size: 35px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        color: teal;
+        text-align: center;
+        padding-top: 2%;
+    }
+
+    .left-bot{
+  clip-path: polygon(0% 25.5%, 100% 25.5%, 80.2% 50.25%, 100% 75%, 0% 74.75%);
+  background-color: yellow;
+  position: fixed;
+  bottom: -6%;
+  left: 0;
+  width: 45%;
+  height: 100px;
+  z-index: 1000;
+}
+
+.right-bot{
+  clip-path: polygon(0% 25.5%, 100% 25.5%, 100% 75%, 0% 74.75%, 19.7% 50.13%);
+background-color: yellow;
+position: fixed;
+bottom: -6%;
+right: 0;
+width: 45%;
+height: 100px;
+z-index: 1000;
+}
+
+.bot1{
+  z-index: 10000;
+  color: rgb(0, 0, 0);
+  font-size: 23px;
+  font-weight:bold;
+  font-family: 'Times New Roman', Times, serif;
+  position: fixed;
+  bottom: 1%;
+  left: 2%;
+}
+.bot2{
+  z-index: 10000;
+  color: rgb(0, 0, 0);
+  font-size: 23px;;
+  font-weight:bold;
+  font-family: 'Times New Roman', Times, serif;
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+}
+
+#home{
+  color: black;
+  font-size: 35px;
+  font-weight: bolder;
+  background-color: rgb(83, 199, 199);
+  border-radius: 60px;
+  width: 50px;
+  text-align: center;
+  padding: 1%;
+  position: fixed;
+  bottom:-1%;
+  left: 42.5%;
+}
+
+figcaption{
+  color: yellow;
+  font-size: medium;
+  font-weight: 500;
+  font-family:Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+#figurestyle{
+  width:100% ;
+border: 0px solid rgb(255, 253, 253);
+position: relative;
+margin: auto;
+display: flex;
+justify-content: space-evenly;
+gap: 15px;
+flex-wrap: wrap;
+padding-bottom: 20%;
+}
+
+figure{
+  margin-top: 5%;
+  width: 40%;
+}
+
+img{
+  width:100%;
+}
+
+/**************** MOBILE RESOLUTION ************/
+
+@media only screen and (min-width:360px){
+    #home{
+        position: fixed;
+  bottom:-1%;
+  left: 43%;
+    }
+    h1{
+    margin-bottom: 10%;
+  }
+}
+
+@media only screen and (min-width:412px){
+  h1{
+    margin-bottom: 20%;
+  }
+    #home{
+        width: 60px;
+    font-size: 45px;
+    position: fixed;
+  bottom:0%;
+  left: 43%; 
+    }
+    .right-bot{
+    height: 130px;
+    position: fixed;
+    bottom:-4%;
+  }
+  .left-bot{
+    height: 130px;
+    position: fixed;
+    bottom:-4%;
+  }
+  .bot1{
+    position: fixed;
+    bottom:1%;
+    left: 1%;
+    font-size: 30px;
+  }
+  .bot2{
+    position: fixed;
+    bottom:1%;
+    right: 1%;
+    font-size: 30px;
+  }
+  #shoe-laundry{
+ position: absolute;
+ left: 38%;
+}
+}
+
+/**************** TABLET RESOLUTION ************/
+
+@media only screen and (min-width:768px){
+    #back-arrow{
+        font-size: 100px;
+    }
+    h1{
+        font-size: 70px;
+    }
+    .right-bot{
+    height: 160px;
+    position: fixed;
+    bottom:-4%;
+  }
+  .left-bot{
+    height: 160px;
+    position: fixed;
+    bottom:-4%;
+  }
+  .bot1{
+    position: fixed;
+    bottom:1%;
+    left: 1%;
+    font-size: 50px;
+  }
+  .bot2{
+    position: fixed;
+    bottom:1%;
+    right: 1%;
+    font-size: 50px;
+  }
+  #home{
+        width: 100px;
+    font-size: 70px;
+    position: fixed;
+  bottom:0%;
+  left: 43%; 
+    }
+}
+
+    </style>
+    </head>
+
+    <body>
+     <p id="back-arrow">&larr;</p>
+     <h1>Rate Card</h1>
+ <div id="figurestyle">
+     <figure id="prem-laundry">
+        <img id="prem-img" src="https://bnz05pap002files.storage.live.com/y4mSp-5yZU84VBZZV9p_X5Y52JojYkA-d9IshlbIYihRilMOe0UFr7_vd-PJmJro3NYgpEw_pqqZtBEbSTPzklQpznqFNoX03H1bjP0s53m23z4DD1kys67lfxOEKRjkYBxnH6WvPxFH7-VrKXsxdXQXqvq_d6lbqzXp7hfRFcVaxAE9ulYhpSbsnnUFCQqaMyW?width=940&height=788&cropmode=none">
+        <figcaption>Premium Laundry<br>Wash & Iron</figcaption>
+     </figure>
+
+     <figure id="org-laundry">
+      <img id="org-img" src="https://bnz05pap002files.storage.live.com/y4mfaINRnbNw5ETEo8ZHAeV_g5RdgXyFhHf2RwmFi2qB2mlje2ZiGQ0Nrgirfkt6u70ooPA5EWZhyGWrhS_f290w-wMvB7Xu2FzlyzYnu4oKo8AvryxSrp36t4ByUva0X-zXDvKOz39xDZFPbFyT3oJVU7rCmNVfd07DoRu-STG1lTaQ-Ds29jxEgzQA6BhIpoM?width=940&height=788&cropmode=none">
+      <figcaption>Organic Laundry<br>Wash & Iron</figcaption>
+     </figure>
+   
+     <figure id="shoe-laundry">
+      <img src="https://bnz05pap002files.storage.live.com/y4mCfqWCAZ3F7RvnbB2HOBxN-y8Rf6Pniq9MriMhcumpF5FFGWt9x3jszuyRgFD75rapXRIixAT77--pkn7111ivdTKXm4t3gdVuouOuY63b2F4TZkd4FSg7UEFS0d0Tw3g9x6KotEqWol0qtUvD0bbg0qoI_S5RV8-s7-SEVEm6YeDHGy4Q8VvbpH0YYE6hj5o?width=500&height=500&cropmode=none">
+      <figcaption>Shoes Laundry</figcaption>
+     </figure>
+
+     <figure id="dry-clean">
+      <img src="https://bnz05pap002files.storage.live.com/y4mdWIHYsA4eQJlcWShmt5aJ8Tnm01EgftL5nPv7AZKJrZAjEzqsBbPfd3ZNeBuAexZtc8t_2mzKlCroNKDBsQw1Gis77AgoHwcjP9QJCLLzvcOAFsIO7SNgWSIQhgKVuvw5CcpwPJed_RzoingMVIT5txmy0TOVpXZkYVQa5pBB5lVxrwzHUdm4DcgU6T0olQ9?width=940&height=788&cropmode=none">
+      <figcaption>Dry Clean</figcaption>
+     </figure>
+
+     <figure id="iron">
+      <img src="https://bnz05pap002files.storage.live.com/y4mS8K4LMieewKGSncfQdx9RpLgFvUoJ7z2_NLuIhDM6gMsAakiUhDlyAZx-V0qxy6BwBXmyVNKTC2uWtdj8eUttSS0p-lMzU4pTJc3UsEZ2kTjeQTvzt4gcBf2iuTTZNmkfwIA8q9S8iuF4jk7k0u5vFLu3TQ8YRr9xleCPh5IeLJ0BGkNlm0qWMRoiXZBSDmV?width=500&height=500&cropmode=none">
+      <figcaption>Iron</figcaption>
+     </figure>
+     </div>
+
+     <div class="left-bot"></div> <p class="bot1">Be Smart</p>
+     <p id="home"><i class="fa-solid fa-house-chimney" style="color: #000000;"></i></p>
+     <div class="right-bot"></div> <p class="bot2">Wear Clean</p>
+
+    </body>
+     <script>
+     var type;
+     document.getElementById("prem-laundry").addEventListener("click", function(){
+          type = "premium";
+          sessionStorage.setItem("type2", type);
+          window.location = "ratecard.html";
+     })
+     document.getElementById("org-laundry").addEventListener("click", function(){
+          type = "organic";
+          sessionStorage.setItem("type2", type);
+          window.location = "ratecard.html";
+     })
+     document.getElementById("shoe-laundry").addEventListener("click", function(){
+          type = "shoes";
+          sessionStorage.setItem("type2", type);
+          window.location = "ratecard.html";
+     })
+     document.getElementById("dry-clean").addEventListener("click", function(){
+          type = "dry-clean";
+          sessionStorage.setItem("type2", type);
+          window.location = "ratecard.html";
+     })
+     document.getElementById("iron").addEventListener("click", function(){
+          type = "iron";
+          sessionStorage.setItem("type2", type);
+          window.location = "ratecard.html";
+     })
+
+           document.getElementById("back-arrow").addEventListener("click", function(){
+            window.location = "maincontent.html";
+           })
+           document.getElementById("home").addEventListener("click", function(){
+            window.location = "maincontent.html";
+           })
+        </script>
+
+ </html>

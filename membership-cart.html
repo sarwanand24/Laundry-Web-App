@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Membership Subscription Cart</title>
+         <meta charset="UTF-8">
+            <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+        <meta name="description" content="Laundry Walaa Membership Subscription Cart">
+        <meta name="viewport" content="width=device-width , initial-scale=1, user-scalable = 0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+       <style>
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+  
+    html,body{
+                background-color: black;
+                overflow-x: hidden;
+                scrollbar-width: none;
+                width: 100%;
+                height: 100%;
+            }
+    
+    ::-webkit-scrollbar{
+        display: none;
+    }
+
+    #back-arrow{
+        color: white;
+        font-size: 50px;
+        font-weight: bolder;
+        margin-left: 3%;
+    }
+
+    h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        color: rgb(65, 170, 184);
+        margin-bottom: 20%;
+    }
+
+    .left-bot{
+  clip-path: polygon(0% 25.5%, 100% 25.5%, 80.2% 50.25%, 100% 75%, 0% 74.75%);
+  background-color: yellow;
+  position: fixed;
+  bottom: -6%;
+  left: 0;
+  width: 45%;
+  height: 100px;
+  z-index: 1000;
+}
+
+.right-bot{
+  clip-path: polygon(0% 25.5%, 100% 25.5%, 100% 75%, 0% 74.75%, 19.7% 50.13%);
+background-color: yellow;
+position: fixed;
+bottom: -6%;
+right: 0;
+width: 45%;
+height: 100px;
+z-index: 1000;
+}
+
+.bot1{
+  z-index: 10000;
+  color: rgb(0, 0, 0);
+  font-size: 23px;
+  font-weight:bold;
+  font-family: 'Times New Roman', Times, serif;
+  position: fixed;
+  bottom: 1%;
+  left: 2%;
+}
+.bot2{
+  z-index: 10000;
+  color: rgb(0, 0, 0);
+  font-size: 23px;;
+  font-weight:bold;
+  font-family: 'Times New Roman', Times, serif;
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+}
+
+#home{
+  color: black;
+  font-size: 35px;
+  font-weight: bolder;
+  background-color: rgb(83, 199, 199);
+  border-radius: 60px;
+  width: 50px;
+  text-align: center;
+  padding: 1%;
+  position: fixed;
+  bottom:-1%;
+  left: 42.5%;
+}
+
+#continue{
+        font-size: 30px;
+        text-align: center;
+        font-family: cursive;
+        font-weight: bold;
+        color: rgb(65, 170, 184);
+        padding: 15%;
+    }
+
+    .plan-valid{
+    margin: auto;
+    width: 80%;
+    background-color: white;
+    padding: 5%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-size: 20px;
+    font-family: cursive;
+    font-weight: bold;
+    margin-bottom: 0.5%;
+}
+
+.address{
+    margin: auto;
+    width: 80%;
+    background-color: white;
+    padding: 5%;
+    font-size: 20px;
+    font-family: cursive;
+    font-weight: bold;
+    margin-bottom: 0.5%;
+}
+
+.selected-date{
+    margin: auto;
+    width: 80%;
+    background-color: white;
+    padding: 5%;
+    font-size: 20px;
+    font-family: cursive;
+    font-weight: bold;
+    margin-bottom: 0.5%;
+}
+
+.collect{
+    margin: auto;
+    width: 80%;
+    background-color: white;
+    padding: 5%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 20px;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+
+@media only screen and (min-width:360px){
+    #home{
+        position: fixed;
+        bottom: -1%;
+        left: 43%;
+    }
+}
+
+@media only screen and (min-width:412px){
+    #home{
+        width: 60px;
+    font-size: 45px;
+    position: fixed;
+  bottom:0%;
+  left: 43%; 
+    }
+    .right-bot{
+    height: 130px;
+    position: fixed;
+    bottom:-4%;
+  }
+  .left-bot{
+    height: 130px;
+    position: fixed;
+    bottom:-4%;
+  }
+  .bot1{
+    position: fixed;
+    bottom:1%;
+    left: 1%;
+    font-size: 30px;
+  }
+  .bot2{
+    position: fixed;
+    bottom:1%;
+    right: 1%;
+    font-size: 30px;
+  }
+  h1{
+    font-size: 30px;
+  }
+}
+
+/**************** TABLET RESOLUTION ************/
+
+@media only screen and (min-width:768px){
+    #back-arrow{
+        font-size: 100px;
+    }
+    h1{
+        font-size: 70px;
+    }
+    .right-bot{
+    height: 160px;
+    position: fixed;
+    bottom:-4%;
+  }
+  .left-bot{
+    height: 160px;
+    position: fixed;
+    bottom:-4%;
+  }
+  .bot1{
+    position: fixed;
+    bottom:1%;
+    left: 1%;
+    font-size: 50px;
+  }
+  .bot2{
+    position: fixed;
+    bottom:1%;
+    right: 1%;
+    font-size: 50px;
+  }
+  #home{
+        width: 100px;
+    font-size: 70px;
+    position: fixed;
+  bottom:0%;
+  left: 43%; 
+    }
+    #continue{
+        font-size: 80px;
+    }
+}
+
+</style>
+    </head>
+
+<body>
+  <p id="back-arrow">&larr;</p>
+  <h1>Membership Subscription</h1>
+
+  <div class="plan-valid">Plan Validity: <span id="plan-valid"></span></div>
+  <div class="address">Your Address: <span id="address"></span></div>
+  <div class="selected-date">Selected Date: <span id="selected-date"></span></div>
+  <div class="collect">Total Clothes to collect: <span id="collect"></span></div>
+
+  <p id="continue">Continue</p>
+
+  <div class="left-bot"></div> <p class="bot1">Be Smart</p>
+  <p id="home"><i class="fa-solid fa-house-chimney" style="color: #000000;"></i></p>
+  <div class="right-bot"></div> <p class="bot2">Wear Clean</p>
+
+</body>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-analytics.js";
+  import { getAuth, createUserWithEmailAndPassword, sendEmailVerification } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-auth.js";
+ 
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCDqQzRmuFOXQgfc12PIxzCDcHIJcIUW0I",
+    authDomain: "laundry-walaa.firebaseapp.com",
+    projectId: "laundry-walaa",
+    storageBucket: "laundry-walaa.appspot.com",
+    messagingSenderId: "164078565347",
+    appId: "1:164078565347:web:f7169029dad99f15fa52d6",
+    measurementId: "G-54QCKHK71N"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
+        import{ getDatabase, ref, set, child, get}
+        from "https://www.gstatic.com/firebasejs/9.9.2/firebase-database.js";
+
+        const database = getDatabase();
+        const auth = getAuth(app);
+
+
+var landmark4 = localStorage.getItem("landmark2");
+var date2 = sessionStorage.getItem("selected_date2");
+var submit = document.getElementById("continue");
+
+      var dateRef = new Date();
+      var year = dateRef.getFullYear();
+      var month = dateRef.getMonth() + 1;
+      var day = dateRef.getDate();
+      console.log(year);
+      console.log(month);
+      console.log(day);
+      var month_name;
+      var month_name2;
+
+      if(date2 < day){
+        month = month + 1;
+        if( month == 1){
+        month_name = "January";
+        month_name2 = "February";
+      }
+      else if( month == 2){
+        month_name = "February";
+        month_name2 = "March";
+      }
+      else if( month == 3){
+        month_name = "March";
+        month_name2 = "April";
+      }
+      else if( month == 4){
+        month_name = "April";
+        month_name2 = "May";
+      }
+      else if( month == 5){
+        month_name = "May";
+        month_name2 = "June";
+      }
+      else if( month == 6){
+        month_name = "June";
+        month_name2 = "July";
+      }
+      else if( month == 7){
+        month_name = "July";
+        month_name2 = "August";
+      }
+      else if( month == 8){
+        month_name = "August";
+        month_name2 = "September";
+      }
+      else if( month == 9){
+        month_name = "September";
+        month_name2 = "October";
+      }
+      else if( month == 10){
+        month_name = "October";
+        month_name2 = "November";
+      }
+      else if( month == 11){
+        month_name = "November";
+        month_name2 = "December";
+      }
+      else if( month == 12){
+        month_name = "December";
+        month_name2 = "January";
+      }
+      }
+
+      else{
+        if( month == 1){
+        month_name = "January";
+        month_name2 = "February";
+      }
+      else if( month == 2){
+        month_name = "February";
+        month_name2 = "March";
+      }
+      else if( month == 3){
+        month_name = "March";
+        month_name2 = "April";
+      }
+      else if( month == 4){
+        month_name = "April";
+        month_name2 = "May";
+      }
+      else if( month == 5){
+        month_name = "May";
+        month_name2 = "June";
+      }
+      else if( month == 6){
+        month_name = "June";
+        month_name2 = "July";
+      }
+      else if( month == 7){
+        month_name = "July";
+        month_name2 = "August";
+      }
+      else if( month == 8){
+        month_name = "August";
+        month_name2 = "September";
+      }
+      else if( month == 9){
+        month_name = "September";
+        month_name2 = "October";
+      }
+      else if( month == 10){
+        month_name = "October";
+        month_name2 = "November";
+      }
+      else if( month == 11){
+        month_name = "November";
+        month_name2 = "December";
+      }
+      else if( month == 12){
+        month_name = "December";
+        month_name2 = "January";
+      }
+      }
+
+      var clothes3 = sessionStorage.getItem("clothes2");
+      var aptment3 = localStorage.getItem("aptment2");
+       var Name3 = localStorage.getItem("Name2");
+       var pincode3 = localStorage.getItem("pincode2");
+       var mobile3 = localStorage.getItem("mobile2");
+
+      document.getElementById("address").innerHTML = landmark4;
+      document.getElementById("selected-date").innerHTML = date2+" "+month_name+" "+year;
+      document.getElementById("plan-valid").innerHTML = date2+" "+month_name2+" "+year;
+      document.getElementById("collect").innerHTML = clothes3;
+       var dbdate =  date2+" "+month_name+" "+year;
+       var validity = date2+" "+month_name2+" "+year
+
+      function write(){
+            var j = Math.random() * 100;
+            j = Math.floor(j);
+
+            const db = getDatabase();
+              set(ref(db, "MembersList/"+ Name3+j),{
+                Name: Name3,
+                Appartment: aptment3,
+                Landmark: landmark4,
+                PinCode: pincode3,
+                Mobile: mobile3,
+                Date: dbdate,
+                Plan_Valid: validity,
+                Clothes_Collect: clothes3,
+                 });
+
+           swal({
+                title: "Hurray!",
+                text: "Membership Confirmed!",
+                icon: "success",
+                button: "Next",
+                });
+                setTimeout(function(){
+                  window.location = "maincontent.html";  
+                }, 3000);  
+        }
+
+       submit.addEventListener("click", write);
+
+
+document.getElementById("back-arrow").addEventListener("click", function(){
+   window.location = "maincontent.html";
+  })
+  document.getElementById("home").addEventListener("click", function(){
+   window.location = "maincontent.html";
+  })
+
+  </script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</html>

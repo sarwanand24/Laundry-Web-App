@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Date Cart</title>
+         <meta charset="UTF-8">
+            <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+        <meta name="description" content="Laundry Walaa Date Selection Cart">
+        <meta name="viewport" content="width=device-width , initial-scale=1, user-scalable = 0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+       <style>
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    
+    html,body{
+                background-color: black;
+                overflow-x: hidden;
+                scrollbar-width: none;
+                width: 100%;
+                height: 100%;
+                position:absolute;
+            }
+    
+    ::-webkit-scrollbar{
+        display: none;
+    }
+
+    #back-arrow{
+        color: white;
+        font-size: 50px;
+        font-weight: bolder;
+       position: absolute;
+       left: 5%;
+    }
+
+    h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        color: rgb(65, 170, 184);
+        padding: 5%;
+    }
+
+    .text{
+      font-size: 25px;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        color:white;
+        padding: 5%;
+    }
+
+    #continue{
+        font-size: 40px;
+        text-align: center;
+        font-family: cursive;
+        font-weight: bold;
+        color: rgb(65, 170, 184);
+        padding: 15%;
+    }
+
+    .left-bot{
+  clip-path: polygon(0% 25.5%, 100% 25.5%, 80.2% 50.25%, 100% 75%, 0% 74.75%);
+  background-color: yellow;
+  position: fixed;
+  bottom: -6%;
+  left: 0;
+  width: 45%;
+  height: 100px;
+  z-index: 1000;
+}
+
+.right-bot{
+  clip-path: polygon(0% 25.5%, 100% 25.5%, 100% 75%, 0% 74.75%, 19.7% 50.13%);
+background-color: yellow;
+position: fixed;
+bottom: -6%;
+right: 0;
+width: 45%;
+height: 100px;
+z-index: 1000;
+}
+
+.bot1{
+  z-index: 10000;
+  color: rgb(0, 0, 0);
+  font-size: 23px;
+  font-weight:bold;
+  font-family: 'Times New Roman', Times, serif;
+  position: fixed;
+  bottom: 1%;
+  left: 2%;
+}
+.bot2{
+  z-index: 10000;
+  color: rgb(0, 0, 0);
+  font-size: 23px;;
+  font-weight:bold;
+  font-family: 'Times New Roman', Times, serif;
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+}
+
+#home{
+  color: black;
+  font-size: 35px;
+  font-weight: bolder;
+  background-color: rgb(83, 199, 199);
+  border-radius: 60px;
+  width: 50px;
+  text-align: center;
+  padding: 1%;
+  position: fixed;
+  bottom:-1%;
+  left: 42.5%;
+}
+
+.month-year{
+     text-align: center;
+     font-size: 50px;
+     font-family: 'Times New Roman', Times, serif;
+     font-weight: bolder;
+     color: white;
+     padding: 8%;
+}
+
+.box{
+        display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: yellow;
+    color: black;
+    font-weight: 500;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 3%;
+    margin-top: 4%;
+    }
+
+input[type="radio"]{
+    position: absolute;
+    height: 50px;
+    opacity: 0;
+}
+
+.selected{
+  outline: 5px solid rgb(0, 255, 0);
+  border-radius: 8px;
+}
+
+@media only screen and (min-width:360px){
+    #home{
+        position: fixed;
+        bottom: -1%;
+        left: 43%;
+    }
+}
+
+@media only screen and (min-width:412px){
+    #home{
+        width: 60px;
+    font-size: 45px;
+    position: fixed;
+  bottom:0%;
+  left: 43%; 
+    }
+    .right-bot{
+    height: 130px;
+    position: fixed;
+    bottom:-4%;
+  }
+  .left-bot{
+    height: 130px;
+    position: fixed;
+    bottom:-4%;
+  }
+  .bot1{
+    position: fixed;
+    bottom:1%;
+    left: 1%;
+    font-size: 30px;
+  }
+  .bot2{
+    position: fixed;
+    bottom:1%;
+    right: 1%;
+    font-size: 30px;
+  }
+  h1{
+    font-size: 50px;
+  }
+}
+
+/**************** TABLET RESOLUTION ************/
+
+@media only screen and (min-width:768px){
+    #back-arrow{
+        font-size: 100px;
+    }
+    h1{
+        font-size: 70px;
+    }
+    .right-bot{
+    height: 160px;
+    position: fixed;
+    bottom:-4%;
+  }
+  .left-bot{
+    height: 160px;
+    position: fixed;
+    bottom:-4%;
+  }
+  .bot1{
+    position: fixed;
+    bottom:1%;
+    left: 1%;
+    font-size: 50px;
+  }
+  .bot2{
+    position: fixed;
+    bottom:1%;
+    right: 1%;
+    font-size: 50px;
+  }
+  #home{
+        width: 100px;
+    font-size: 70px;
+    position: fixed;
+  bottom:0%;
+  left: 43%; 
+    }
+    .text{
+      font-size: 50px;
+    }
+    .month-year{
+        font-size: 100px;
+    }
+    #continue{
+        font-size: 80px;
+    }
+}
+
+</style>
+    </head>
+
+    <body>
+      <h1><p id="back-arrow">&larr;</p>Cart</h1>
+      <p class="text">Select Your Pick-up Date and Time</p>
+
+      <div class="month-year">
+      <span id="month"></span>&nbsp;&nbsp;<span id="year"></span>
+      </div>
+
+      <div class="box" id="d1">
+        <input type="radio" name="date" id="1">
+        <p id="weekday1">Mon</p>
+        <p id="day1"></p>
+      </div>
+      <div class="box" id="d2">
+        <input type="radio" name="date" id="2">
+        <p id="weekday2">Tue</p>
+        <p id="day2"></p>
+      </div>
+      <div class="box" id="d3">
+        <input type="radio" name="date" id="3">
+        <p id="weekday3">Wed</p>
+        <p id="day3"></p>
+      </div>
+      <div class="box" id="d4">
+        <input type="radio" name="date" id="4">
+        <p id="weekday4">Thu</p>
+        <p id="day4"></p>
+      </div>
+      <div class="box" id="d5">
+        <input type="radio" name="date" id="5">
+        <p id="weekday5">Fri</p>
+        <p id="day5"></p>
+      </div>
+      <div class="box" id="d6">
+        <input type="radio" name="date" id="6">
+        <p id="weekday6">Sat</p>
+        <p id="day6"></p>
+      </div>
+      <div class="box" id="d7">
+        <input type="radio" name="date" id="7">
+        <p id="weekday7">Sun</p>
+        <p id="day7"></p>
+      </div>
+
+      <p id="continue">Continue</p>
+
+     <div class="left-bot"></div> <p class="bot1">Be Smart</p>
+     <p id="home"><i class="fa-solid fa-house-chimney" style="color: #000000;"></i></p>
+     <div class="right-bot"></div> <p class="bot2">Wear Clean</p>
+
+    </body>
+       <script>
+
+      document.getElementById("back-arrow").addEventListener("click", function(){
+       window.location = "maincontent.html";
+      })
+      document.getElementById("home").addEventListener("click", function(){
+       window.location = "maincontent.html";
+      })
+
+      var date = new Date();
+      var year = date.getFullYear();
+      var month = date.getMonth() + 1;
+      var day = date.getDate();
+      var weekday = date.getDay();
+
+      var month_name;
+
+      if( month == 1){
+        month_name = "January";
+      }
+      else if( month == 2){
+        month_name = "February";
+      }
+      else if( month == 3){
+        month_name = "March";
+      }
+      else if( month == 4){
+        month_name = "April";
+      }
+      else if( month == 5){
+        month_name = "May";
+      }
+      else if( month == 6){
+        month_name = "June";
+      }
+      else if( month == 7){
+        month_name = "July";
+      }
+      else if( month == 8){
+        month_name = "August";
+      }
+      else if( month == 9){
+        month_name = "September";
+      }
+      else if( month == 10){
+        month_name = "October";
+      }
+      else if( month == 11){
+        month_name = "November";
+      }
+      else if( month == 12){
+        month_name = "December";
+      }
+
+      var weekday_name;
+      
+      if( weekday == 1){
+        weekday_name = "Mon";
+        document.getElementById("weekday1").innerHTML = weekday_name;
+      document.getElementById("weekday2").innerHTML = "Tue";
+      document.getElementById("weekday3").innerHTML = "Wed";
+      document.getElementById("weekday4").innerHTML = "Thu";
+      document.getElementById("weekday5").innerHTML = "Fri";
+      document.getElementById("weekday6").innerHTML = "Sat";
+      document.getElementById("weekday7").innerHTML = "Sun";
+      }
+      else if( weekday == 2){
+        weekday_name = "Tue";
+        document.getElementById("weekday1").innerHTML = weekday_name;
+      document.getElementById("weekday2").innerHTML = "Wed";
+      document.getElementById("weekday3").innerHTML = "Thu";
+      document.getElementById("weekday4").innerHTML = "Fri";
+      document.getElementById("weekday5").innerHTML = "Sat";
+      document.getElementById("weekday6").innerHTML = "Sun";
+      document.getElementById("weekday7").innerHTML = "Mon";
+      }
+      else if( weekday == 3){
+        weekday_name = "Wed";
+        document.getElementById("weekday1").innerHTML = weekday_name;
+      document.getElementById("weekday2").innerHTML = "Thu";
+      document.getElementById("weekday3").innerHTML = "Fri";
+      document.getElementById("weekday4").innerHTML = "Sat";
+      document.getElementById("weekday5").innerHTML = "Sun";
+      document.getElementById("weekday6").innerHTML = "Mon";
+      document.getElementById("weekday7").innerHTML = "Tue";
+      }
+      else if( weekday == 4){
+        weekday_name = "Thu";
+        document.getElementById("weekday1").innerHTML = weekday_name;
+      document.getElementById("weekday2").innerHTML = "Fri";
+      document.getElementById("weekday3").innerHTML = "Sat";
+      document.getElementById("weekday4").innerHTML = "Sun";
+      document.getElementById("weekday5").innerHTML = "Mon";
+      document.getElementById("weekday6").innerHTML = "Tue";
+      document.getElementById("weekday7").innerHTML ="Wed";
+      }
+      else if( weekday == 5){
+        weekday_name = "Fri";
+        document.getElementById("weekday1").innerHTML = weekday_name;
+      document.getElementById("weekday2").innerHTML = "Sat";
+      document.getElementById("weekday3").innerHTML = "Sun";
+      document.getElementById("weekday4").innerHTML = "Mon";
+      document.getElementById("weekday5").innerHTML = "Tue";
+      document.getElementById("weekday6").innerHTML = "Wed";
+      document.getElementById("weekday7").innerHTML = "Thu";
+      }
+      else if( weekday == 6){
+        weekday_name = "Sat";
+        document.getElementById("weekday1").innerHTML = weekday_name;
+      document.getElementById("weekday2").innerHTML = "Sun";
+      document.getElementById("weekday3").innerHTML = "Mon";
+      document.getElementById("weekday4").innerHTML = "Tue";
+      document.getElementById("weekday5").innerHTML = "Wed";
+      document.getElementById("weekday6").innerHTML = "Thu";
+      document.getElementById("weekday7").innerHTML = "Fri";
+      }
+      else if( weekday == 0){
+        weekday_name = "Sun";
+        document.getElementById("weekday1").innerHTML = weekday_name;
+      document.getElementById("weekday2").innerHTML = "Mon";
+      document.getElementById("weekday3").innerHTML = "Tue";
+      document.getElementById("weekday4").innerHTML = "Wed";
+      document.getElementById("weekday5").innerHTML = "Thu";
+      document.getElementById("weekday6").innerHTML = "Fri";
+      document.getElementById("weekday7").innerHTML = "Sat";
+      }
+
+      console.log(day);
+      console.log(year);
+      console.log(month);
+      console.log(weekday);
+
+      document.getElementById("month").innerHTML = month_name;
+      document.getElementById("year").innerHTML = year;
+
+      if((month == 4 || month == 6 || month == 9 || month == 11) && (day == 25)){
+      document.getElementById("day1").innerHTML = day;
+      document.getElementById("day2").innerHTML = day + 1;
+      document.getElementById("day3").innerHTML = day + 2;
+      document.getElementById("day4").innerHTML = day + 3;
+      document.getElementById("day5").innerHTML = day + 4;
+      document.getElementById("day6").innerHTML = day + 5;
+      document.getElementById("day7").innerHTML = 1;
+      }
+      else if((month == 4 || month == 6 || month == 9 || month == 11) && (day == 26)){
+      document.getElementById("day1").innerHTML = day;
+      document.getElementById("day2").innerHTML = day + 1;
+      document.getElementById("day3").innerHTML = day + 2;
+      document.getElementById("day4").innerHTML = day + 3;
+      document.getElementById("day5").innerHTML = day + 4;
+      document.getElementById("day6").innerHTML = 1;
+      document.getElementById("day7").innerHTML = 2;
+      }
+      else if((month == 4 || month ==  6 || month ==  9 || month ==  11) && (day == 27)){
+      document.getElementById("day1").innerHTML = day;
+      document.getElementById("day2").innerHTML = day + 1;
+      document.getElementById("day3").innerHTML = day + 2;
+      document.getElementById("day4").innerHTML = day + 3;
+      document.getElementById("day5").innerHTML = 1;
+      document.getElementById("day6").innerHTML = 2;
+      document.getElementById("day7").innerHTML = 3;
+      }
+      else if((month == 4 || month ==  6 || month ==  9 || month ==  11) && (day == 28)){
+      document.getElementById("day1").innerHTML = day;
+      document.getElementById("day2").innerHTML = day + 1;
+      document.getElementById("day3").innerHTML = day + 2;
+      document.getElementById("day4").innerHTML = 1;
+      document.getElementById("day5").innerHTML = 2;
+      document.getElementById("day6").innerHTML = 3;
+      document.getElementById("day7").innerHTML = 4;
+      }
+      else if((month == 4 || month ==  6 || month ==  9 || month ==  11) && (day == 29)){
+      document.getElementById("day1").innerHTML = day;
+      document.getElementById("day2").innerHTML = day + 1;
+      document.getElementById("day3").innerHTML = 1;
+      document.getElementById("day4").innerHTML = 2;
+      document.getElementById("day5").innerHTML = 3;
+      document.getElementById("day6").innerHTML = 4;
+      document.getElementById("day7").innerHTML = 5;
+      }
+      else if((month == 4 || month ==  6 || month ==  9 || month ==  11) && (day == 30)){
+      document.getElementById("day1").innerHTML = day;
+      document.getElementById("day2").innerHTML = 1;
+      document.getElementById("day3").innerHTML = 2;
+      document.getElementById("day4").innerHTML = 3;
+      document.getElementById("day5").innerHTML = 4;
+      document.getElementById("day6").innerHTML = 5;
+      document.getElementById("day7").innerHTML = 6;
+      }
+      else if((month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) && (day == 26)){
+      document.getElementById("day1").innerHTML = day;
+      document.getElementById("day2").innerHTML = day + 1;
+      document.getElementById("day3").innerHTML = day + 2;
+      document.getElementById("day4").innerHTML = day + 3;
+      document.getElementById("day5").innerHTML = day + 4;
+      document.getElementById("day6").innerHTML = day + 5;
+      document.getElementById("day7").innerHTML = 1;
+      }
+      else if((month == 1 || month ==  3 || month ==  5 || month ==  7 || month ==  8 || month ==  10 || month == 12) && (day == 27)){
+      document.getElementById("day1").innerHTML = day;
+      document.getElementById("day2").innerHTML = day + 1;
+      document.getElementById("day3").innerHTML = day + 2;
+      document.getElementById("day4").innerHTML = day + 3;
+      document.getElementById("day5").innerHTML = day + 4;
+      document.getElementById("day6").innerHTML = 1;
+      document.getElementById("day7").innerHTML = 2;
+      }
+      else if((month == 1 || month ==  3 || month ==  5 || month ==  7 || month ==  8 || month ==  10 || month == 12) && (day == 28)){
+      document.getElementById("day1").innerHTML = day;
+      document.getElementById("day2").innerHTML = day + 1;
+      document.getElementById("day3").innerHTML = day + 2;
+      document.getElementById("day4").innerHTML = day + 3;
+      document.getElementById("day5").innerHTML = 1;
+      document.getElementById("day6").innerHTML = 2;
+      document.getElementById("day7").innerHTML = 3;
+      }
+      else if((month == 1 || month ==  3 || month ==  5 || month ==  7 || month ==  8 || month ==  10 || month == 12) && (day == 29)){
+      document.getElementById("day1").innerHTML = day;
+      document.getElementById("day2").innerHTML = day + 1;
+      document.getElementById("day3").innerHTML = day + 2;
+      document.getElementById("day4").innerHTML = 1;
+      document.getElementById("day5").innerHTML = 2;
+      document.getElementById("day6").innerHTML = 3;
+      document.getElementById("day7").innerHTML = 4;
+      }
+      else if((month == 1 || month ==  3 || month ==  5 || month ==  7 || month ==  8 || month ==  10 || month == 12) && (day == 30)){
+      document.getElementById("day1").innerHTML = day;
+      document.getElementById("day2").innerHTML = day + 1;
+      document.getElementById("day3").innerHTML = 1;
+      document.getElementById("day4").innerHTML = 2;
+      document.getElementById("day5").innerHTML = 3;
+      document.getElementById("day6").innerHTML = 4;
+      document.getElementById("day7").innerHTML = 5;
+      }
+      else if((month == 1 || month ==  3 || month ==  5 || month ==  7 || month ==  8 || month ==  10 || month == 12) && (day == 31)){
+      document.getElementById("day1").innerHTML = day;
+      document.getElementById("day2").innerHTML = 1;
+      document.getElementById("day3").innerHTML = 2;
+      document.getElementById("day4").innerHTML = 3;
+      document.getElementById("day5").innerHTML = 4;
+      document.getElementById("day6").innerHTML = 5;
+      document.getElementById("day7").innerHTML = 6;
+      }
+     else{
+      document.getElementById("day1").innerHTML = day;
+      document.getElementById("day2").innerHTML = day + 1;
+      document.getElementById("day3").innerHTML = day + 2;
+      document.getElementById("day4").innerHTML = day + 3;
+      document.getElementById("day5").innerHTML = day + 4;
+      document.getElementById("day6").innerHTML = day + 5;
+      document.getElementById("day7").innerHTML = day + 6;
+     }
+
+     var selected_date;
+     var radiobox = [];
+
+     for(let i=1; i<=7; i++){
+            document.getElementById(i).addEventListener("click", function(){
+              for(let j=1; j<=7; j++){
+                  radiobox[j] = document.getElementById(j);
+                  if(radiobox[j].checked){
+                    if(j == 1){
+                        document.getElementById("d1").classList.add("selected");
+                        selected_date = document.getElementById("day1").innerHTML;
+                    }
+                    if(j == 2){
+                        document.getElementById("d2").classList.add("selected");
+                        selected_date = document.getElementById("day2").innerHTML;
+                    }
+                    if(j == 3){
+                        document.getElementById("d3").classList.add("selected");
+                        selected_date = document.getElementById("day3").innerHTML;
+                    }
+                    if(j == 4){
+                        document.getElementById("d4").classList.add("selected");
+                        selected_date = document.getElementById("day4").innerHTML;
+                    }
+                    if(j == 5){
+                        document.getElementById("d5").classList.add("selected");
+                        selected_date = document.getElementById("day5").innerHTML;
+                    }
+                    if(j == 6){
+                        document.getElementById("d6").classList.add("selected");
+                        selected_date = document.getElementById("day6").innerHTML;
+                    }
+                    if(j == 7){
+                        document.getElementById("d7").classList.add("selected");
+                        selected_date = document.getElementById("day7").innerHTML;
+                    }
+                }
+                if(!radiobox[j].checked){
+                    if(j == 1){
+                        document.getElementById("d1").classList.remove("selected");
+                    }
+                    if(j == 2){
+                        document.getElementById("d2").classList.remove("selected");
+                    }
+                    if(j == 3){
+                        document.getElementById("d3").classList.remove("selected");
+                    }
+                    if(j == 4){
+                        document.getElementById("d4").classList.remove("selected");
+                    }
+                    if(j == 5){
+                        document.getElementById("d5").classList.remove("selected");
+                    }
+                    if(j == 6){
+                        document.getElementById("d6").classList.remove("selected");
+                    }
+                    if(j == 7){
+                        document.getElementById("d7").classList.remove("selected");
+                    }
+                }
+              }
+              document.getElementById("continue").addEventListener("click", function(){
+              console.log(selected_date);//Carrying the end result , yaha se cookies karo direct last cart m.
+              sessionStorage.setItem("selected_date2", selected_date);
+              window.location = "address.html";
+            })
+            })
+          }
+
+      </script>
+</html>
