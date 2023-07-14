@@ -6,159 +6,22 @@
             <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
         <meta name="description" content="Splash Screen And Next Pages For usefull Insights">
         <meta name="viewport" content="width=device-width , initial-scale=1, user-scalable = 0 ">
-
-        <style>
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-html,body{
-    background-color:rgb(0, 0, 0);
-            overflow-x: hidden;
-            scrollbar-width: none;
-            width: 100%;
-            height: 100%;
-            position: fixed;
-    top: 0%;
-    left: 0%;
-    right: 0%;
-    bottom: 0%;
-        }
-
-::-webkit-scrollbar{
-    display: none;
-}
-
-#splash{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: rgb(0, 0, 0);
-    display: flex;
-    flex-direction: column;
-    opacity: 1;
-    transition: opacity 1s;
-    top: 0;
-    left: 0;  
-    align-items: center;
-    justify-content: center;
-}
-
-.logo{
-    width: 100%;
-    height: 100%;
-}
-
-.logo1{
-      background-color: rgb(46, 46, 46);
-      width: 100%;
-      height: 100%;
-}
-
-#splash.fade{
-    opacity: 0;
-}
-
-.next{
-background-color: white;
-border-radius: 10px;
-width: 20%;
-height: 5%;
-position: absolute;
-top: 94%;
-right: 5%;
-}
-
-.next1{
-    opacity: 0%;
-    animation-name: next;
-    animation-delay: 5s;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes next{
-
-from{
-    opacity: 0%;
-}
-
-to{
-    opacity: 100%;
-    
-}
-
-}
-
-
-#slide2{
-    display: none;
-}
-
-         </style>
-
+        <link rel="stylesheet" href="index.css"/>
     </head>
 
     <body>
-
-
 <div id="splash">
   <img src="https://bnz05pap002files.storage.live.com/y4m469Rt5cOVgdtUJx9GO75qyuyVVX22BtvohPVLs67xsQtueUy79531lERmXjJozaSaB_QlXubt2GDozDs-T4XL4IlXQd213jEKPSkOehRgf_37Rwp07Pvb26YugB5iLEST3CqSbrI6s5b3JtLq3RfO7dotW-gtA7TSrof4zExfhHvOjzJ9zgfOcTu9elWwREe?width=1080&height=1920&cropmode=none" class="logo"></img>
-  </div>
-
-  
+  </div> 
   <div id="slide1">
-
     <img src="https://bnz05pap002files.storage.live.com/y4m9Y9-j2zezbgSIaVG4CrlTAsSvSHApzE4JnKkhqmRlonXvylUixM5RJsagUhZf336QA_jpm_RiA_mnmR_Y34DIVV2iB6hIUKB7srkJLgBF1U4dP_ftdRfvkcxF9lsqQA3PUjpiypYyeSsuEGUOqlkbgtrpB-vknTwgWBEUpHtk-s7JljTaQfBRYXSbUveHidC?width=1080&height=1920&cropmode=none" class="logo1"></img>
-    <button type="menu" class="next next1" id="next1">Next-></button>
-    
-    </div>
-     
+    <button type="menu" class="next next1" id="next1">Next-></button>    
+  </div>     
   <div id="slide2">
     <img src="https://bnz05pap002files.storage.live.com/y4masdlLKX4YOmip1KHLmxea_r0seACHT3i9q3Cjo3Qs3Khhsci71FMTCC6J7GCeYQseli2enH0FyVIldZEFye_ma8v4cKXkf0cfxN3Y-xYQsSDUG2RN3WKLv0cZHvmJK4wxGwXY3SP7wN8S6F2T8dUy0Idcq40wS730-1azopKv7IUp-7dqmNr8hxHPpUlK5Q6?width=1080&height=1920&cropmode=none" class="logo1"></img>
     <button type="menu" class="next" id="next2">Next-></button>
     </div>
 
-  <script>
-
-document.getElementById("next1").addEventListener("click", function(){
-
-    document.getElementById("slide1").style.display="none";
-    document.getElementById("slide2").style.display="block";
-
-})
-
-document.getElementById("next2").addEventListener("click", function(){
-
-    var flag = 1;
-localStorage.setItem("flag1",flag);
-
-    window.location = "maincontent.html";
-
-})
-
-window.onload = function(){
-
-var flag2 = localStorage.getItem("flag1");
-
-if(flag2 > 0){
-
-    setTimeout(()=>{
-        window.location = "maincontent.html";
-    },2000);
-
-}
-
-}
-
-setTimeout(()=>{
-      document.getElementById("splash").classList.toggle("fade");
-    },5000);
-
-
-    </script>
+  <script src="index.js"></script>
    </body>
   </html>
