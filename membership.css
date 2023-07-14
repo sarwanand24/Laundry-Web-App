@@ -1,0 +1,234 @@
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    
+    html,body{
+                background-color: black;
+                overflow-x: hidden;
+                scrollbar-width: none;
+                width: 100%;
+                height: 100%;
+            }
+    
+    ::-webkit-scrollbar{
+        display: none;
+    }
+
+    #back-arrow{
+        color: white;
+        font-size: 50px;
+        font-weight: bolder;
+        margin-left: 3%;
+    }
+
+    h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        color: rgb(65, 170, 184);
+    }
+
+    .text{
+      font-size: 15px;
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      color: yellow;
+      padding: 5%;
+    }
+
+    .left-bot{
+  clip-path: polygon(0% 25.5%, 100% 25.5%, 80.2% 50.25%, 100% 75%, 0% 74.75%);
+  background-color: yellow;
+  position: fixed;
+  bottom: -6%;
+  left: 0;
+  width: 45%;
+  height: 100px;
+  z-index: 1000;
+}
+
+.right-bot{
+  clip-path: polygon(0% 25.5%, 100% 25.5%, 100% 75%, 0% 74.75%, 19.7% 50.13%);
+background-color: yellow;
+position: fixed;
+bottom: -6%;
+right: 0;
+width: 45%;
+height: 100px;
+z-index: 1000;
+}
+
+.bot1{
+  z-index: 10000;
+  color: rgb(0, 0, 0);
+  font-size: 23px;
+  font-weight:bold;
+  font-family: 'Times New Roman', Times, serif;
+  position: fixed;
+  bottom: 1%;
+  left: 2%;
+}
+.bot2{
+  z-index: 10000;
+  color: rgb(0, 0, 0);
+  font-size: 23px;;
+  font-weight:bold;
+  font-family: 'Times New Roman', Times, serif;
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+}
+
+#home{
+  color: black;
+  font-size: 35px;
+  font-weight: bolder;
+  background-color: rgb(83, 199, 199);
+  border-radius: 60px;
+  width: 50px;
+  text-align: center;
+  padding: 1%;
+  position: fixed;
+  bottom:-1%;
+  left: 42.5%;
+}
+
+#forward-arrow{
+       color: white;
+       font-size: 120px;
+       font-weight: bolder;
+       text-align: center;
+       margin-top: -5%;
+}
+
+.slider-container {
+  height: 40vh;
+  display: inline-flex;
+  overflow: hidden;
+  scrollbar-width: none;
+  transform: translateX(0);
+  will-change: transform;
+  transition: transform 0.3s ease-out;
+  cursor: grab;
+}
+
+.slide{
+  max-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 2rem; */
+}
+
+.slide img{
+  max-width: 100%;
+  max-height: 100%;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 5px 5px 50px -1px var(--shadow);
+  border-radius: 4px;
+  user-select: none;
+}
+
+.grabbing {
+  cursor: grabbing;
+}
+
+.grabbing .slide img{
+  transform: scale(0.9);
+  box-shadow: 5px 5px 40px -1px var(--shadow);
+}
+
+@media only screen and (min-width:360px){
+    #home{
+        position: fixed;
+        bottom: -1%;
+        left: 43%;
+    }
+}
+
+@media only screen and (min-width:412px){
+    #home{
+        width: 60px;
+    font-size: 45px;
+    position: fixed;
+  bottom:0%;
+  left: 43%; 
+    }
+    .right-bot{
+    height: 130px;
+    position: fixed;
+    bottom:-4%;
+  }
+  .left-bot{
+    height: 130px;
+    position: fixed;
+    bottom:-4%;
+  }
+  .bot1{
+    position: fixed;
+    bottom:1%;
+    left: 1%;
+    font-size: 30px;
+  }
+  .bot2{
+    position: fixed;
+    bottom:1%;
+    right: 1%;
+    font-size: 30px;
+  }
+  h1{
+    font-size: 30px;
+  }
+}
+
+/**************** TABLET RESOLUTION ************/
+
+@media only screen and (min-width:768px){
+    #back-arrow{
+        font-size: 100px;
+    }
+    h1{
+        font-size: 70px;
+    }
+    .right-bot{
+    height: 160px;
+    position: fixed;
+    bottom:-4%;
+  }
+  .left-bot{
+    height: 160px;
+    position: fixed;
+    bottom:-4%;
+  }
+  .bot1{
+    position: fixed;
+    bottom:1%;
+    left: 1%;
+    font-size: 50px;
+  }
+  .bot2{
+    position: fixed;
+    bottom:1%;
+    right: 1%;
+    font-size: 50px;
+  }
+  #home{
+        width: 100px;
+    font-size: 70px;
+    position: fixed;
+  bottom:0%;
+  left: 43%; 
+    }
+    .text{
+      font-size: 40px;
+    }
+
+}
