@@ -379,3 +379,180 @@ z-index: 1000;
   margin-top: 40%;
 }
 }
+
+@media only screen and (min-width:1024px){
+  #location-name{
+    font-size: xx-large;
+  }
+  h2{
+   font-size: 40px;
+  }
+  h2 > p{
+   font-size: 30px;
+  }
+  #location-perm > p{
+   font-size: 33px;
+  }
+  .bc > button{
+   font-size: 35px;
+  }
+  .txt1{
+   position: absolute;
+   top: 320px;
+   left: 10%;
+   font-size: 60px;
+ }
+ .txt2{
+   position: absolute;
+   top: 565px;
+   right: 10%;
+   font-size: 60px;
+ }
+ .txt3{
+   position: absolute;
+   top: 910px;
+   left: 10%;
+   font-size: 60px;
+ }
+ .txt4{
+   position: absolute;
+   top: 1150px;
+   font-size: 60px;
+ }
+ .right-arrow{
+   width: 550px;
+   height: 250px;
+ }
+ .left-arrow{
+   width: 550px;
+   height: 250px;
+ }
+ #recharge{
+   margin-top: 40%;
+ }
+ #cart{
+  width: 60px;
+  font-size: 45px;
+  position: fixed;
+  bottom:0%;
+  left: 47%;
+}
+ }
+
+ @media only screen and (min-width: 1440px){
+  #location-name{
+    font-size: xx-large;
+  }
+  h2{
+   font-size: 40px;
+  }
+  h2 > p{
+   font-size: 30px;
+  }
+  #location-perm > p{
+   font-size: 33px;
+  }
+  .bc > button{
+   font-size: 35px;
+  }
+  .txt1{
+   position: absolute;
+   top: 395px;
+   left: 10%;
+   font-size: 60px;
+ }
+ .txt2{
+   position: absolute;
+   top: 635px;
+   right: 10%;
+   font-size: 60px;
+ }
+ .txt3{
+   position: absolute;
+   top: 1116px;
+   left: 10%;
+   font-size: 60px;
+ }
+ .txt4{
+   position: absolute;
+   top: 1350px;
+   font-size: 60px;
+ }
+ .right-arrow{
+   width: 550px;
+   height: 250px;
+ }
+ .left-arrow{
+   width: 550px;
+   height: 250px;
+ }
+ #recharge{
+   margin-top: 40%;
+ }
+ #cart{
+  width: 60px;
+  font-size: 45px;
+  position: fixed;
+  bottom:0%;
+  left: 47%;
+}
+ }
+
+ @media only screen and (min-width: 1760px){
+  #location-name{
+    font-size: xx-large;
+  }
+  h2{
+   font-size: 40px;
+  }
+  h2 > p{
+   font-size: 30px;
+  }
+  #location-perm > p{
+   font-size: 33px;
+  }
+  .bc > button{
+   font-size: 35px;
+  }
+  .txt1{
+   position: absolute;
+   top: 455px;
+   left: 10%;
+   font-size: 60px;
+ }
+ .txt2{
+   position: absolute;
+   top: 685px;
+   right: 6%;
+   font-size: 60px;
+ }
+ .txt3{
+   position: absolute;
+   top: 1276px;
+   left: 10%;
+   font-size: 60px;
+ }
+ .txt4{
+   position: absolute;
+   top: 1510px;
+   font-size: 60px;
+ }
+ .right-arrow{
+   width: 550px;
+   height: 250px;
+ }
+ .left-arrow{
+   width: 550px;
+   height: 250px;
+ }
+ #recharge{
+   margin-top: 40%;
+ }
+ #cart{
+  width: 60px;
+  font-size: 45px;
+  position: fixed;
+  bottom:0%;
+  left: 47%;
+}
+ }
