@@ -232,3 +232,14 @@ z-index: 1000;
     }
 
 }
+
+    @media only screen and (min-width:1024px){
+  #home{
+        width: 100px;
+        font-size: 70px;
+        position: fixed;
+        bottom:0%;
+        left: 45%;
+    }
+}
+
