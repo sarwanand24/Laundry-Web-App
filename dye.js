@@ -4,14 +4,19 @@
            document.getElementById("c").innerHTML = "Sky Blue";
            document.getElementById("c2").innerHTML = "Rani Pink";
         }
-        else if(width >= 412){
+        else if(width >= 412 && width < 768){
            document.getElementById("c").innerHTML = "Sky Blue Colour";
            document.getElementById("c2").innerHTML = "Rani Pink Colour";
         }
         else if(width < 360){
            document.getElementById("c").innerHTML = "Sky Blue Colour";
         }
-
+        else if(width >= 768){
+           document.getElementById("lc1").innerHTML = "Dark Blue Colour";
+           document.getElementById("lc2").innerHTML = "Steel Gray Colour";
+           document.getElementById("c2").innerHTML = "Rani Pink Colour";
+           document.getElementById("lc3").innerHTML = "Baby Pink Colour";
+        }
         document.getElementById("back-arrow").addEventListener("click", function(){
             window.location = "maincontent.html";
            })
