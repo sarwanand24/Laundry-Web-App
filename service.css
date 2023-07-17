@@ -210,3 +210,24 @@ img{
   left: 43%; 
     }
 }
+
+
+@media only screen and (min-width:1024px){
+  #home{
+    width: 100px;
+    font-size: 70px;
+    position: fixed;
+    bottom:0%;
+    left: 45%;
+    }
+}
+
+@media only screen and (min-width:1440px){
+  #home{
+    width: 100px;
+    font-size: 70px;
+    position: fixed;
+    bottom:0%;
+    left: 47%;
+    }
+}
