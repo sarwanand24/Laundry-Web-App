@@ -1,0 +1,102 @@
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    
+    html,body{
+                background-color: black;
+                overflow-x: hidden;
+                scrollbar-width: none;
+                width: 100%;
+                height: 100%;
+                position:absolute;
+            }
+    
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    h1{
+        font-size: 40px;
+        font-weight: bolder;
+        font-family: 'Times New Roman', Times, serif;
+        color: white;
+        text-align: center;
+        padding: 5%;
+    }
+    input{
+        background-color: transparent;
+        color: white;
+        padding: 3%;
+        text-align: center;
+        font-size: larger;
+        border: none;
+        border-bottom: 2px solid white;
+        width: 100%;
+       outline: none;
+       margin-top: 3%;
+    }
+    h2{
+        font-size: 25px;
+        font-weight: bolder;
+        font-family: 'Times New Roman', Times, serif;
+        color: white;
+        padding: 2%;
+        margin-top: 10%;
+    }
+    .list-to-show{
+    background-color: yellow;
+    padding: 5%;
+    margin: auto;
+    margin-top: 3%;
+    border-radius: 10px;
+    width: 95%;
+    display: none; 
+}
+.list-to-show > p{
+    font-size: larger;
+    font-weight: bolder;
+    font-family: sans-serif;
+}
+.opbg{
+    background-color: rgb(16, 51, 51);
+    border-radius: 15px;
+    padding: 1%;
+    width: 90px;
+    position: absolute;
+    right: 5%;
+}
+.no-of-item{
+    color: white;
+    font-size: large;
+}
+.decrement-unicode, .increment-unicode{
+    color: white;
+    font-size: larger;
+    padding: 9%;
+}
+.rs{
+    float: right;
+    margin-top: 5%;
+    font-size: medium;
+}
+.pay{
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 3%;
+    margin-top: 5%;
+}
+.pay > .amt{
+    float: right;
+}
+#submit{
+    width: 100%;
+    padding: 5%;
+    color: black;
+    background-color: teal;
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+}
