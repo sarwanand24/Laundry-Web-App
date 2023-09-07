@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Services List</title>
+         <meta charset="UTF-8">
+            <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+        <meta name="description" content="All Services of Laundry Walaa">
+        <meta name="viewport" content="width=device-width , initial-scale=1, user-scalable = 0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+       <style>
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    
+    html,body{
+                background-color: black;
+                overflow-x: hidden;
+                scrollbar-width: none;
+                width: 100%;
+                height: 100%;
+                position:absolute;
+            }
+    
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    h1{
+        font-size: 40px;
+        font-weight: bolder;
+        font-family: 'Times New Roman', Times, serif;
+        color: yellow;
+        text-align: center;
+        padding: 5%;
+    }
+    .searchbar{
+width: 75%;
+height: 35px;
+border-radius: 8px;
+background-color: white;
+display: block;
+margin: auto;
+text-align: center;
+font-size: medium;
+color: black;
+}
+::placeholder{
+text-align: center;
+font-size: medium;
+}
+.fa-search{
+    padding-top: 2%;
+    font-size: large;
+    position: absolute;
+    color: black;
+    left: 14%;
+}
+.list-to-show{
+    background-color: yellow;
+    padding: 5%;
+    margin: auto;
+    margin-top: 3%;
+    border-radius: 10px;
+    width: 95%;
+}
+.list-to-show > p{
+    font-size: larger;
+    font-weight: bolder;
+    font-family: sans-serif;
+}
+.opbg{
+    background-color: rgb(16, 51, 51);
+    border-radius: 15px;
+    padding: 1%;
+    width: 90px;
+    position: absolute;
+    right: 5%;
+}
+.no-of-item{
+    color: white;
+    font-size: large;
+}
+.decrement-unicode, .increment-unicode{
+    color: white;
+    font-size: larger;
+    padding: 9%;
+}
+.rs{
+    float: right;
+    margin-top: 5%;
+    font-size: medium;
+}
+.footer{
+    background-color: teal;
+    padding: 5%;
+}
+.last{
+    margin-bottom: 5%;
+}
+.bottom{
+    color: black;
+    font-size: larger;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#cart{
+ float: right;
+}
+       </style>
+     </head>
+  
+     <body>
+        <h1>Laundry</h1>
+        <div>
+         <i class="fas fa-search"></i><input type="text" placeholder="Search" class="searchbar" id="searchbar" onkeyup="search_list()" />
+        </div>
+     
+        <div class="list-to-show">
+         <p class="list-name">Shirt Premium  <span class="opbg"><span class="decrement-unicode" id="dec1">&minus;</span> <span class="no-of-item" id="no-of-item1">0</span> <span class="increment-unicode" id="inc1">&plus;</span></span> </span><br> Wash & Iron <span class="rs">RS 15/-</p>
+        </div>
+
+        <div class="list-to-show">
+            <p class="list-name">T-Shirt Premium  <span class="opbg"><span class="decrement-unicode" id="dec2">&minus;</span> <span class="no-of-item" id="no-of-item2">0</span> <span class="increment-unicode" id="inc2">&plus;</span></span> </span><br> Wash & Iron <span class="rs">RS 15/-</p>
+        </div>
+
+        <div class="list-to-show">
+            <p class="list-name">Jeans Premium  <span class="opbg"><span class="decrement-unicode" id="dec3">&minus;</span> <span class="no-of-item" id="no-of-item3">0</span> <span class="increment-unicode" id="inc3">&plus;</span></span> </span><br> Wash & Iron <span class="rs">RS 15/-</p>
+        </div>
+
+        <div class="list-to-show">
+            <p class="list-name">Formal Premium  <span class="opbg"><span class="decrement-unicode" id="dec4">&minus;</span> <span class="no-of-item" id="no-of-item4">0</span> <span class="increment-unicode" id="inc4">&plus;</span></span> </span><br> Wash & Iron <span class="rs">RS 20/-</p>
+        </div>
+
+        <div class="list-to-show">
+            <p class="list-name">Shorts Premium  <span class="opbg"><span class="decrement-unicode" id="dec5">&minus;</span> <span class="no-of-item" id="no-of-item5">0</span> <span class="increment-unicode" id="inc5">&plus;</span></span> </span><br> Wash & Iron <span class="rs">RS 10/-</p>
+        </div>
+
+        <div class="list-to-show">
+            <p class="list-name">Kurta(set) Premium  <span class="opbg"><span class="decrement-unicode" id="dec6">&minus;</span> <span class="no-of-item" id="no-of-item6">0</span> <span class="increment-unicode" id="inc6">&plus;</span></span> </span><br> Wash & Iron <span class="rs">RS 65/-</p>
+        </div>
+
+        <div class="list-to-show">
+            <p class="list-name">Kurti(set) Premium  <span class="opbg"><span class="decrement-unicode" id="dec7">&minus;</span> <span class="no-of-item" id="no-of-item7">0</span> <span class="increment-unicode" id="inc7">&plus;</span></span> </span><br> Wash & Iron <span class="rs">RS 65/-</p>
+        </div>
+
+        <div class="list-to-show">
+            <p class="list-name">Kurta Premium  <span class="opbg"><span class="decrement-unicode" id="dec8">&minus;</span> <span class="no-of-item" id="no-of-item8">0</span> <span class="increment-unicode" id="inc8">&plus;</span></span> </span><br> Wash & Iron <span class="rs">RS 45/-</p>
+        </div>
+
+        <div class="list-to-show">
+            <p class="list-name">Kurti Premium  <span class="opbg"><span class="decrement-unicode" id="dec9">&minus;</span> <span class="no-of-item" id="no-of-item9">0</span> <span class="increment-unicode" id="inc9">&plus;</span></span> </span><br> Wash & Iron <span class="rs">RS 45/-</p>
+        </div>
+
+        <div class="list-to-show">
+            <p class="list-name">Salwar Premium  <span class="opbg"><span class="decrement-unicode" id="dec10">&minus;</span> <span class="no-of-item" id="no-of-item10">0</span> <span class="increment-unicode" id="inc10">&plus;</span></span> </span><br> Wash & Iron <span class="rs">RS 49/-</p>
+        </div>
+
+        <div class="list-to-show">
+            <p class="list-name">Saree Premium  <span class="opbg"><span class="decrement-unicode" id="dec11">&minus;</span> <span class="no-of-item" id="no-of-item11">0</span> <span class="increment-unicode" id="inc11">&plus;</span></span> </span><br> Wash & Iron <span class="rs">RS 59/-</p>
+        </div>
+
+        <div class="list-to-show">
+            <p class="list-name">Saree Heavy Premium  <span class="opbg"><span class="decrement-unicode" id="dec12">&minus;</span> <span class="no-of-item" id="no-of-item12">0</span> <span class="increment-unicode" id="inc12">&plus;</span></span> </span><br> Wash & Iron <span class="rs">RS 79/-</p>
+        </div>
+
+        <div class="list-to-show">
+            <p class="list-name">Towel Premium  <span class="opbg"><span class="decrement-unicode" id="dec13">&minus;</span> <span class="no-of-item" id="no-of-item13">0</span> <span class="increment-unicode" id="inc13">&plus;</span></span> </span><br> Wash & Iron <span class="rs">RS 20/-</p>
+        </div>
+
+        <div class="list-to-show">
+            <p class="list-name">Pillow Cover Premium  <span class="opbg"><span class="decrement-unicode" id="dec14">&minus;</span> <span class="no-of-item" id="no-of-item14">0</span> <span class="increment-unicode" id="inc14">&plus;</span></span> </span><br> Wash & Iron <span class="rs">RS 08/-</p>
+        </div>
+
+        <div class="list-to-show">
+            <p class="list-name">Bedsheet Premium  <span class="opbg"><span class="decrement-unicode" id="dec15">&minus;</span> <span class="no-of-item" id="no-of-item15">0</span> <span class="increment-unicode" id="inc15">&plus;</span></span> </span><br> Wash & Iron <span class="rs">RS 39/-</p>
+        </div>
+
+        <div class="list-to-show">
+            <p class="list-name">Leggings Premium  <span class="opbg"><span class="decrement-unicode" id="dec16">&minus;</span> <span class="no-of-item" id="no-of-item16">0</span> <span class="increment-unicode" id="inc16">&plus;</span></span> </span><br> Wash & Iron <span class="rs">RS 15/-</p>
+        </div>
+
+        <div class="list-to-show">
+            <p class="list-name">Trouser Premium  <span class="opbg"><span class="decrement-unicode" id="dec17">&minus;</span> <span class="no-of-item" id="no-of-item17">0</span> <span class="increment-unicode" id="inc17">&plus;</span></span> </span><br> Wash & Iron <span class="rs">RS 15/-</p>
+        </div>
+
+        <div class="list-to-show">
+            <p class="list-name">Blanket-S Premium  <span class="opbg"><span class="decrement-unicode" id="dec18">&minus;</span> <span class="no-of-item" id="no-of-item18">0</span> <span class="increment-unicode" id="inc18">&plus;</span></span> </span><br> Wash & Packing <span class="rs">RS 249/-</p>
+        </div>
+
+        <div class="list-to-show">
+            <p class="list-name">Blanket-D Premium  <span class="opbg"><span class="decrement-unicode" id="dec19">&minus;</span> <span class="no-of-item" id="no-of-item19">0</span> <span class="increment-unicode" id="inc19">&plus;</span></span> </span><br> Wash & Packing <span class="rs">RS 349/-</p>
+        </div>
+
+        <div class="list-to-show">
+            <p class="list-name">Jackets Premium  <span class="opbg"><span class="decrement-unicode" id="dec20">&minus;</span> <span class="no-of-item" id="no-of-item20">0</span> <span class="increment-unicode" id="inc20">&plus;</span></span> </span><br> Wash & Iron <span class="rs">RS 49/-</p>
+        </div>
+
+        <div class="list-to-show">
+            <p class="list-name">Sweater Premium  <span class="opbg"><span class="decrement-unicode" id="dec21">&minus;</span> <span class="no-of-item" id="no-of-item21">0</span> <span class="increment-unicode" id="inc21">&plus;</span></span> </span><br> Wash & Iron <span class="rs">RS 49/-</p>
+        </div>
+
+        <div class="list-to-show">
+            <p class="list-name">Track Suit Premium  <span class="opbg"><span class="decrement-unicode" id="dec22">&minus;</span> <span class="no-of-item" id="no-of-item22">0</span> <span class="increment-unicode" id="inc22">&plus;</span></span> </span><br> Wash & Packing <span class="rs">RS 49/-</p>
+        </div>
+
+        <div class="list-to-show">
+            <p class="list-name">Sports Shoes Premium  <span class="opbg"><span class="decrement-unicode" id="dec23">&minus;</span> <span class="no-of-item" id="no-of-item23">0</span> <span class="increment-unicode" id="inc23">&plus;</span></span> </span><br> Wash & Packing <span class="rs">RS 129/-</p>
+        </div>
+
+        <div class="list-to-show">
+            <p class="list-name">Canvas & Sneakers Premium  <span class="opbg"><span class="decrement-unicode" id="dec24">&minus;</span> <span class="no-of-item" id="no-of-item24">0</span> <span class="increment-unicode" id="inc24">&plus;</span></span> </span><br> Wash & Packing <span class="rs">RS 149/-</p>
+        </div>
+
+        <div class="list-to-show last">
+            <p class="list-name">Heels & Sandals Premium  <span class="opbg"><span class="decrement-unicode" id="dec25">&minus;</span> <span class="no-of-item" id="no-of-item25">0</span> <span class="increment-unicode" id="inc25">&plus;</span></span> </span><br> Wash & Packing <span class="rs">RS 149/-</p>
+        </div>
+
+     <div class="footer" id="gocart">
+        <p class="bottom"><span id="items">0</span> Items - Rs <span id="total">0</span>/- <span id="cart">Go to Cart -></span></p>
+     </div>
+     </body>
+
+     <script>
+
+        function search_list(){  
+
+ let input = document.getElementById("searchbar").value;
+ input=input.toLowerCase();
+ let x = document.getElementsByClassName("list-name");
+ let y = document.getElementsByClassName("list-to-show");
+
+ for (i = 0; i < x.length; i++){
+  if (!x[i].innerHTML.toLowerCase().includes(input) ) {
+    y[i].style.display="none";
+  }
+ else{
+  y[i].style.display="block";
+ }
+ }
+}
+
+var no_of_item = [];
+var count = [];
+var sub_total = [];
+var total = document.getElementById("total");
+var total_item = document.getElementById("items");
+
+for(var i = 1; i<=25; i++){
+    no_of_item[i] = document.getElementById("no-of-item"+i);
+    count[i] = 0;
+    sub_total[i] = 0;
+    //**********INCREMENT FUNCTION**********
+    document.getElementById("inc"+i).addEventListener("click", function(){
+        console.log(this.id);
+        var number = this.id.replace(/[a-z]/g,"");
+        console.log(number);
+        count[number]++;
+        console.log(count[number]);
+        if(number == 1 || number == 2 || number == 3 || number == 16 || number == 17){
+            sub_total[number] = count[number]*15;
+            console.log(sub_total[number]);
+        }
+        else if(number == 4 || number == 13){
+            sub_total[number] = count[number]*20;
+            console.log(sub_total[number]);
+        }
+        else if(number == 5){
+            sub_total[number] = count[number]*10;
+            console.log(sub_total[number]);
+        }
+        else if(number == 6 || number == 7){
+            sub_total[number] = count[number]*65;
+            console.log(sub_total[number]);
+        }
+        else if(number == 8 || number == 9){
+            sub_total[number] = count[number]*45;
+            console.log(sub_total[number]);
+        }
+        else if(number == 10 || number == 20 || number == 21 || number == 22){
+            sub_total[number] = count[number]*49;
+            console.log(sub_total[number]);
+        }
+        else if(number == 11){
+            sub_total[number] = count[number]*59;
+            console.log(sub_total[number]);
+        }
+        else if(number == 12){
+            sub_total[number] = count[number]*79;
+            console.log(sub_total[number]);
+        }
+        else if(number == 14){
+            sub_total[number] = count[number]*8;
+            console.log(sub_total[number]);
+        }
+        else if(number == 15){
+            sub_total[number] = count[number]*39;
+            console.log(sub_total[number]);
+        }
+        else if(number == 18){
+            sub_total[number] = count[number]*249;
+            console.log(sub_total[number]);
+        }
+        else if(number == 19){
+            sub_total[number] = count[number]*349;
+            console.log(sub_total[number]);
+        }
+        else if(number == 23){
+            sub_total[number] = count[number]*129;
+            console.log(sub_total[number]);
+        }
+        else if(number == 24 || number == 25){
+            sub_total[number] = count[number]*149;
+            console.log(sub_total[number]);
+        }
+        no_of_item[number].innerHTML = count[number];
+        var sum_of_total = 0;
+        var sum_of_quant = 0;
+        for(var j = 1; j<=25; j++){
+           sum_of_total = sum_of_total + sub_total[j];
+           sum_of_quant = sum_of_quant + count[j];
+           console.log(sum_of_total);//TOTAL TO BE PRINTED ON THE BILL
+           console.log(sum_of_quant);//TOTAL QUANTITY TO BE PRINTED ON BILL
+           console.log(count[j]);//QUANTITY OF SEPARATE CLOTHES
+           console.log(sub_total[j]);//PRICE OF SEPARATE CLOTHES
+        }
+        total.innerHTML = sum_of_total;
+        total_item.innerHTML = sum_of_quant;
+        console.log(sum_of_total);
+        sessionStorage.setItem("sum_of_total2", sum_of_total);
+        console.log(sum_of_quant);
+        sessionStorage.setItem("sum_of_quant2", sum_of_quant);
+        console.log(count);
+        sessionStorage.setItem("count2", JSON.stringify(count));
+        console.log(sub_total);
+        sessionStorage.setItem("sub_total2", JSON.stringify(sub_total));
+    })
+
+    document.getElementById("dec"+i).addEventListener("click", function(){
+    console.log(this.id);
+    var number = this.id.replace(/[a-z]/g,"");
+    console.log(number);
+    if(count[number] > 0){
+    count[number]--;
+    }
+    console.log(count[number]);
+    if(number == 1 || number == 2 || number == 3 || number == 16 || number == 17){
+            sub_total[number] = count[number]*15;
+            console.log(sub_total[number]);
+        }
+        else if(number == 4 || number == 13){
+            sub_total[number] = count[number]*20;
+            console.log(sub_total[number]);
+        }
+        else if(number == 5){
+            sub_total[number] = count[number]*10;
+            console.log(sub_total[number]);
+        }
+        else if(number == 6 || number == 7){
+            sub_total[number] = count[number]*65;
+            console.log(sub_total[number]);
+        }
+        else if(number == 8 || number == 9){
+            sub_total[number] = count[number]*45;
+            console.log(sub_total[number]);
+        }
+        else if(number == 10 || number == 20 || number == 21 || number == 22){
+            sub_total[number] = count[number]*49;
+            console.log(sub_total[number]);
+        }
+        else if(number == 11){
+            sub_total[number] = count[number]*59;
+            console.log(sub_total[number]);
+        }
+        else if(number == 12){
+            sub_total[number] = count[number]*79;
+            console.log(sub_total[number]);
+        }
+        else if(number == 14){
+            sub_total[number] = count[number]*8;
+            console.log(sub_total[number]);
+        }
+        else if(number == 15){
+            sub_total[number] = count[number]*39;
+            console.log(sub_total[number]);
+        }
+        else if(number == 18){
+            sub_total[number] = count[number]*249;
+            console.log(sub_total[number]);
+        }
+        else if(number == 19){
+            sub_total[number] = count[number]*349;
+            console.log(sub_total[number]);
+        }
+        else if(number == 23){
+            sub_total[number] = count[number]*129;
+            console.log(sub_total[number]);
+        }
+        else if(number == 24 || number == 25){
+            sub_total[number] = count[number]*149;
+            console.log(sub_total[number]);
+        }
+        no_of_item[number].innerHTML = count[number];
+        var sum_of_total = 0;
+        var sum_of_quant = 0;
+        for(var j = 1; j<=25; j++){
+           sum_of_total = sum_of_total + sub_total[j];
+           sum_of_quant = sum_of_quant + count[j];
+           console.log(sum_of_total);//TOTAL TO BE PRINTED ON THE BILL
+           console.log(sum_of_quant);//TOTAL QUANTITY TO BE PRINTED ON BILL
+           console.log(count[j]);//QUANTITY OF SEPARATE CLOTHES
+           console.log(sub_total[j]);//PRICE OF SEPARATE CLOTHES
+        }
+        total.innerHTML = sum_of_total;
+        total_item.innerHTML = sum_of_quant;
+        console.log(sum_of_total);
+        sessionStorage.setItem("sum_of_total2", sum_of_total);
+        console.log(sum_of_quant);
+        sessionStorage.setItem("sum_of_quant2", sum_of_quant);
+        console.log(count);
+        sessionStorage.setItem("count2", JSON.stringify(count));
+        console.log(sub_total);
+        sessionStorage.setItem("sub_total2", JSON.stringify(sub_total));
+})
+}
+
+document.getElementById("gocart").addEventListener("click", function(){
+    window.location = "mycart.html";
+})
+
+        </script>
+ </html>
